@@ -89,7 +89,7 @@ public:
 		this->alto = alto;
 		//aqui cargamos las texturas de alturas y el cesped
 		//CargaParametros(L"Starter_Content\\vckmabus_2K_Albedo.jpg", L"Starter_Content\\alturas.jpg", 100.0f); //Original
-		CargaParametros(L"TextTerreno\\Zacatito.jpg", L"TextTerreno\\terreno.jpg", 100.0f); //Plano con lago
+		CargaParametros(L"TextTerreno\\CespedRocas.jpg", L"TextTerreno\\AlturaA.jpg", 40.0f); //Plano con lago
 	}
 
 	~TerrenoRR()
@@ -274,13 +274,13 @@ public:
 			//crea los accesos de las texturas para los shaders 
 			d3dResult = D3DX11CreateShaderResourceViewFromFile( d3dDevice, diffuseTex, 0, 0, &colorMap, 0 );
 			d3dResult = D3DX11CreateShaderResourceViewFromFile( d3dDevice, L"TextTerreno\\patch_diffuse.jpg", 0, 0, &colorMap2, 0 );
-			d3dResult = D3DX11CreateShaderResourceViewFromFile( d3dDevice, L"TextTerreno\\Asfalto.png", 0, 0, &colorMap3, 0 );
-			d3dResult = D3DX11CreateShaderResourceViewFromFile( d3dDevice, L"TextTerreno\\ZacatitoNorm.jpg", 0, 0, &colorMapN, 0);
+			d3dResult = D3DX11CreateShaderResourceViewFromFile( d3dDevice, L"TextTerreno\\Cesped.jpg", 0, 0, &colorMap3, 0 );
+			d3dResult = D3DX11CreateShaderResourceViewFromFile( d3dDevice, L"TextTerreno\\Tierra.jpg", 0, 0, &colorMapN, 0);
 			d3dResult = D3DX11CreateShaderResourceViewFromFile( d3dDevice, L"TextTerreno\\patch_normal.jpg", 0, 0, &colorMapN2, 0);
-			d3dResult = D3DX11CreateShaderResourceViewFromFile( d3dDevice, L"TextTerreno\\Asfalto_Normal.jpg", 0, 0, &colorMapN3, 0);
-			d3dResult = D3DX11CreateShaderResourceViewFromFile(d3dDevice, L"TextTerreno\\ZacatitoSpec.jpg", 0, 0, &colorMapS, 0);
+			d3dResult = D3DX11CreateShaderResourceViewFromFile( d3dDevice, L"TextTerreno\\CespedNormal.jpg", 0, 0, &colorMapN3, 0);
+			d3dResult = D3DX11CreateShaderResourceViewFromFile(d3dDevice, L"TextTerreno\\TierraSpecular.jpg", 0, 0, &colorMapS, 0);
 			d3dResult = D3DX11CreateShaderResourceViewFromFile(d3dDevice, L"TextTerreno\\patch_specular.jpg", 0, 0, &colorMapS2, 0);
-			d3dResult = D3DX11CreateShaderResourceViewFromFile(d3dDevice, L"TextTerreno\\Asfalto_Spec.jpg", 0, 0, &colorMapS3, 0);
+			d3dResult = D3DX11CreateShaderResourceViewFromFile(d3dDevice, L"TextTerreno\\CespedSpecular.jpg", 0, 0, &colorMapS3, 0);
 			d3dResult = D3DX11CreateShaderResourceViewFromFile( d3dDevice, L"TextTerreno\\blendMap2.jpg", 0, 0, &blendMap, 0 );
 			d3dResult = D3DX11CreateShaderResourceViewFromFile( d3dDevice, L"TextTerreno\\blendMap.jpg", 0, 0, &blendMap2, 0 );
 

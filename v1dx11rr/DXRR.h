@@ -60,6 +60,11 @@ public:
 	ModeloRR* kiosko1 = 0;
 	ModeloRR* kiosko2 = 0;
 	ModeloRR* kiosko3 = 0;
+	ModeloRR* pinos = 0;
+	ModeloRR* rocas = 0;
+	ModeloRR* banca = 0;
+	ModeloRR* lampara = 0;
+	ModeloRR* plano = 0;
 	//Laberinto
 	ModeloRR* laberinto = 0;
 	
@@ -109,7 +114,7 @@ public:
 
 		camara = new Camara(D3DXVECTOR3(-110,80,6), D3DXVECTOR3(0,80,0), D3DXVECTOR3(0,1,0), Ancho, Alto);
 		light = new Light(-30.0f, -50.0f, -30.0f, 0.2f, 0.2f, 1.0f, 1.0f);
-		terreno = new TerrenoRR(300, 300, d3dDevice, d3dContext);
+		terreno = new TerrenoRR(480, 480, d3dDevice, d3dContext);
 		lago = new Agua(79, 111, d3dDevice, d3dContext);
 		//skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"Starter_Content/SkyDome.png");
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"TextTerreno/Sky/SkyD3.png", L"TextTerreno/Sky/SkyT4_ED.jpg", L"TextTerreno/Sky/SkyN4_ED.jpg", light);
@@ -131,6 +136,13 @@ public:
 		kiosko1 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_1.obj", L"Assets/Kiosko/Kiosko_1 Color.png", L"Assets/Kiosko/Kiosko_1 Specular.png", -74, 124);
 		kiosko2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_2.obj", L"Assets/Kiosko/Kiosko_2 Color.png", L"Assets/Kiosko/Kiosko_2 Specular.png", -74, 124);
 		kiosko3 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_3.obj", L"Assets/Kiosko/Kiosko_3 Color.png", L"Assets/Kiosko/Kiosko_3 Specular.png", -74, 124);
+		pinos = new ModeloRR(d3dDevice, d3dContext, "Assets/Pinos/Pinos.obj", L"Assets/Pinos/Pinos_Color.png", L"Assets/Pinos/Pinos Specular.jpg", 0, 0);
+		rocas = new ModeloRR(d3dDevice, d3dContext, "Assets/Rocas/Roca.obj", L"Assets/Rocas/Roca Color.jpg", L"Assets/Rocas/Roca Specular.jpg", 0, 0);
+		banca = new ModeloRR(d3dDevice, d3dContext, "Assets/Banca/Banca.obj", L"Assets/Banca/Banca Color.png", L"Assets/Banca/Banca Specular.png", 0, 0);
+		lampara = new ModeloRR(d3dDevice, d3dContext, "Assets/Lamparas/Lamparas.obj", L"Assets/Lamparas/Lampara.jpg", L"Assets/Lamparas/Lampara Specular.jpg", 0, 0);
+
+
+		//plano = new ModeloRR(d3dDevice, d3dContext, "Assets/Plano/Plano.obj", L"Assets/Kiosko/Kiosko_3 Color.png", L"Assets/Kiosko/Kiosko_3 Specular.png", 0, 0);
 
 		//Modelos para escenario principal
 		laberinto = new ModeloRR(d3dDevice, d3dContext, "Assets/Laberinto/Laberinto.obj", L"Assets/Laberinto/LaberintoColor.jpg", L"Assets/Laberinto/LaberintoSpecular.jpg", 0, 0);
@@ -478,12 +490,19 @@ public:
 		llave->Draw(camara->vista, camara->proyeccion, terreno->Superficie(150, 20), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
 		pelota->Draw(camara->vista, camara->proyeccion, terreno->Superficie(300, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
 		juego->Draw(camara->vista, camara->proyeccion, terreno->Superficie(200,0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
-		casa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 180, 'A', 0.4, light->GetDirection(), light->GetDiffuseColor());
-		mesa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0) +1.5, camara->posCam, 10.0f, 180, 'A', 0.05, light->GetDirection(), light->GetDiffuseColor());
-		kiosko1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) +1, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
-		kiosko2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) +1, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
-		kiosko3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) +1, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
-		laberinto->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0) + 4, camara->posCam, 10.0f, 0, 'A', 1, light->GetDirection(), light->GetDiffuseColor());
+		casa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 1, light->GetDirection(), light->GetDiffuseColor());
+		mesa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0) + 1.5, camara->posCam, 10.0f, 0, 'A', 1, light->GetDirection(), light->GetDiffuseColor());
+		kiosko1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+		kiosko2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+		kiosko3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+		pinos->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+		rocas->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+		banca->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+		lampara->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+
+		//plano->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 1, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+
+		laberinto->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0) + 4, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 
 
 

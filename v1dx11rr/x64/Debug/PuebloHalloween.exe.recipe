@@ -2,18 +2,18 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\ArelyLara\Downloads\repoGC2\x64\Debug\PuebloHalloween.exe</FullPath>
+      <FullPath>C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\x64\Debug\PuebloHalloween.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\ArelyLara\Downloads\repoGC2\x64\Debug\Billboard.cso</FullPath>
+      <FullPath>C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\x64\Debug\Billboard.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\ArelyLara\Downloads\repoGC2\x64\Debug\Modelo.cso</FullPath>
+      <FullPath>C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\x64\Debug\Modelo.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\ArelyLara\Downloads\repoGC2\x64\Debug\Text.cso</FullPath>
+      <FullPath>C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\x64\Debug\Text.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />

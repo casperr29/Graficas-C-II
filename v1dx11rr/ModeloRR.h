@@ -98,6 +98,18 @@ public:
 	void setZ(float Zpos) {
 		posZ = Zpos;
 	}
+
+	float sphere[3];
+
+float* getSphere(float radio)
+	{
+		sphere[0] = posX;
+		sphere[1] = posZ;
+		sphere[2] = radio;
+
+		return sphere;
+	}
+
 	ModeloRR(ID3D11Device* D3DDevice, ID3D11DeviceContext* D3DContext, char* ModelPath, WCHAR* colorTexturePath, WCHAR* specularTexturePath, float _posX, float _posZ)
 	{
 
