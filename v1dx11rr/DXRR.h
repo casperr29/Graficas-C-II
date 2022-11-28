@@ -26,6 +26,13 @@ public:
 	bool key1 = false;
 	bool key2 = false;
 	bool key3 = false;
+	int vida = 5;
+
+	bool pinchos1 = false;
+	bool pinchos2 = false;
+	bool pinchos3 = false;
+	bool pinchos4 = false;
+	bool pinchos5 = false;
 
 	#pragma region Atributos publicos
 	HINSTANCE hInstance;
@@ -72,6 +79,13 @@ public:
 	ModeloRR* banca = 0;
 	ModeloRR* lampara = 0;
 	ModeloRR* plano = 0;
+
+	//Interactuables
+	ModeloRR* pincho1 = 0;
+	ModeloRR* pincho2 = 0;
+	ModeloRR* pincho3 = 0;
+	ModeloRR* pincho4 = 0;
+	ModeloRR* pincho5 = 0;
 
 	//Laberinto
 	ModeloRR* laberinto = 0;
@@ -177,6 +191,12 @@ public:
 		banca = new ModeloRR(d3dDevice, d3dContext, "Assets/Banca/Banca.obj", L"Assets/Banca/Banca Color.png", L"Assets/Banca/Banca Specular.png", 0, 0);
 		lampara = new ModeloRR(d3dDevice, d3dContext, "Assets/Lamparas/Lamparas.obj", L"Assets/Lamparas/Lampara.jpg", L"Assets/Lamparas/Lampara Specular.jpg", 0, 0);
 
+		//interactuable
+		pincho1 = new ModeloRR(d3dDevice, d3dContext, "Assets/Pinchos/Pincho1.obj", L"Assets/Pinchos/Pinchos Color.jpg", L"Assets/Pinchos/Pinchos Specular.jpg", 65, 79);
+		pincho2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Pinchos/Pincho2.obj", L"Assets/Pinchos/Pinchos Color.jpg", L"Assets/Pinchos/Pinchos Specular.jpg", 40, 90);
+		pincho3 = new ModeloRR(d3dDevice, d3dContext, "Assets/Pinchos/Pincho3.obj", L"Assets/Pinchos/Pinchos Color.jpg", L"Assets/Pinchos/Pinchos Specular.jpg", 25, 95);
+		pincho4 = new ModeloRR(d3dDevice, d3dContext, "Assets/Pinchos/Pincho4.obj", L"Assets/Pinchos/Pinchos Color.jpg", L"Assets/Pinchos/Pinchos Specular.jpg", 89, 96);
+		pincho5 = new ModeloRR(d3dDevice, d3dContext, "Assets/Pinchos/Pincho5.obj", L"Assets/Pinchos/Pinchos Color.jpg", L"Assets/Pinchos/Pinchos Specular.jpg", 6, 83);
 
 		//plano = new ModeloRR(d3dDevice, d3dContext, "Assets/Plano/Plano.obj", L"Assets/Kiosko/Kiosko_3 Color.png", L"Assets/Kiosko/Kiosko_3 Specular.png", 0, 0);
 
@@ -551,6 +571,14 @@ public:
 		lampara->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 		//plano->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 1, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 
+		//interactuable
+		/*pincho1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+		pincho2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+		pincho3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+		pincho4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+		pincho5->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+		*/
+
 		laberinto->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0) + 4, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 		
 		if (TotalKeys != 3)
@@ -605,6 +633,60 @@ public:
 				TotalKeys++;
 			}
 		}
+
+		//Colision de pinchazo
+
+		if (pinchos1 == false)
+		{
+			pincho1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+			if (isPointInsideSphere(camara->getPos(), pincho1->getSphere(8)))
+			{
+				vida = vida - 1;
+				pinchos1 = true;
+			}
+		}
+
+		if (pinchos2 == false)
+		{
+			pincho2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+			if (isPointInsideSphere(camara->getPos(), pincho2->getSphere(8)))
+			{
+				vida = vida - 1;
+				pinchos2 = true;
+			}
+		}
+
+		if (pinchos3 == false)
+		{
+			pincho3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+			if (isPointInsideSphere(camara->getPos(), pincho3->getSphere(8)))
+			{
+				vida = vida - 1;
+				pinchos3 = true;
+			}
+		}
+
+		if (pinchos4 == false)
+		{
+			pincho4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+			if (isPointInsideSphere(camara->getPos(), pincho4->getSphere(8)))
+			{
+				vida = vida - 1;
+				pinchos4 = true;
+			}
+		}
+
+		if (pinchos5 == false)
+		{
+			pincho5->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+			if (isPointInsideSphere(camara->getPos(), pincho5->getSphere(8)))
+			{
+				vida = vida - 1;
+				pinchos5 = true;
+			}
+		}
+
+
 
 		//COLISIÓN DE GANADOR
 		
