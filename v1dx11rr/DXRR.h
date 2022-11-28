@@ -107,12 +107,9 @@ public:
 
 	//Texto
 	Text* Coordenadas;
-
-
-	bool effectDone = false;
-	bool KeyCollition1 = false;
-	bool KeyCollition2 = false;
-	bool KeyCollition3 = false;
+	Text* CuentaRegresiva;
+	Text* TiempoMuestra;
+	Text* TiempoMuestraGanar;
 
 
 	float posGlobal[2];
@@ -122,6 +119,12 @@ public:
 	float vel2;
 	bool breakpoint;
 	bool inFP = true;
+
+	//Para el tiempo
+	float segundos;
+	float TimeShow;
+	float TimeWinShow;
+
 	vector2 uv1[32];
 	vector2 uv2[32];
 	vector2 uv3[32];
@@ -137,6 +140,10 @@ public:
 	{
 		#pragma region Inicializacion
 			breakpoint = false;
+			segundos = 301;
+			TimeShow = 2;
+			TimeWinShow = 6;
+
 			frameBillboard = 0;
 			ancho = Ancho;
 			alto = Alto;
@@ -204,15 +211,29 @@ public:
 		laberinto = new ModeloRR(d3dDevice, d3dContext, "Assets/Laberinto/Laberinto.obj", L"Assets/Laberinto/LaberintoColor.jpg", L"Assets/Laberinto/LaberintoSpecular.jpg", 0, 0);
 		puerta = new ModeloRR(d3dDevice, d3dContext, "Assets/Puerta/Puerta.obj", L"Assets/Puerta/Puerta Color.png", L"Assets/Puerta/Puerta Specular.png", 0, 0);
 		
-		//GUI
-		vida3 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/health_full.png");
-		Ganaste = new GUI(d3dDevice, d3dContext, 1.85, 1.6, L"Assets/GUI/Interface/GANASTE.png");
+	//GUI
+	vida3 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/health_full.png");
+	//Mensajes del GUI
+	Ganaste = new GUI(d3dDevice, d3dContext, 1.85, 1.6, L"Assets/GUI/Interface/GANASTE.png");
+	Perdiste = new GUI(d3dDevice, d3dContext, 1.80, 1.5, L"Assets/GUI/Interface/PERDISTE.png");
+	Tiempo = new GUI(d3dDevice, d3dContext, 1.85, 1.6, L"Assets/GUI/Interface/TIEMPO.png");
+
+
+		//Cuando te vayas quedando sin vida 
+		BarraVida5 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/BarraVidas/Vida_5.png");
+		BarraVida4 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/BarraVidas/Vida_4.png");
+		BarraVida3 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/BarraVidas/Vida_3.png");
+		BarraVida2 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/BarraVidas/Vida_2.png");
+		BarraVida1 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/BarraVidas/Vida_1.png");
+		BarraVida0 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/BarraVidas/Vida_0.png");
 
 
 	
 	//Texto
 		Coordenadas = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.5f, 0.6f, 0.8f, 1.0f));
-	
+		CuentaRegresiva = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
+		TiempoMuestra = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
+		TiempoMuestraGanar = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
 	}
 
 	~DXRR()
@@ -532,16 +553,8 @@ public:
 		lago->Draw(camara->vista, camara->proyeccion, camara->posCam, onda, light->GetDirection(), light->GetDiffuseColor(), 79.3f, -3.0f, 111.1f);
 
 		//TurnOnAlphaBlending();
-
-
 		billboard[0]->Draw(camara->vista, camara->proyeccion, camara->posCam,
 			-11, -78, 4, 5, 1, 1, uv1, uv2, uv3, uv4, frameBillboard, 'D', neutralLightD, neutralLightC);
-
-		
-		
-
-		////TurnOffAlphaBlending();  //antes habia en supercifie (100, 20)
-		vida3->Draw(-0.86, -0.3);
 
 		////(vita, proyección, altura en Y, posición de la cámara, fuerza especular, ángulo de rotación, angulo en que se rotará, escala)
 		if (inFP) {
@@ -600,6 +613,10 @@ public:
 		// //MessageBox(hWnd, L"Colision", L"Advertencia", MB_OK);
 		// camara->posCam = camara->pastPosCam;
 		//}
+		
+
+        #pragma region Lógica de las llaves y los pinchos
+
 
 		if (key1 == false)
 		{
@@ -686,42 +703,30 @@ public:
 			}
 		}
 
-
-
+     #pragma endregion
+	    
+        #pragma region Cuando ganas pasa esto
 		//COLISIÓN DE GANADOR
 		
 		//CollisionWin(-70,-42, -140 , -139, true);
 
-		if (camara->posCam.z > -70 && camara->posCam.z<-42 && camara->posCam.x > -140 && camara->posCam.x < -139)
-			Ganaste->Draw(-0.28, 0.4);
+		if (camara->posCam.z > -72 && camara->posCam.z<-42 && camara->posCam.x > -228 && camara->posCam.x < -139)
+		{
+			if (TimeWinShow >= 0 && TotalKeys == 3)
+			{
+				TiempoMuestraGanar->Time(TimeShow);
+				Ganaste->Draw(-0.28, 0.4);
+				TimeWinShow -= 0.033;
+			}
+			else {
+			      //Poner condicionales de que te faltan tantas llaves aquí
+			}
+
+		}
+
+
 		
-
-
-		//if (key2 = false)
-		//{
-		//	key2 = true;
-		//	llave2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
-		//
-		//}
-		//
-		//if (key3 = false)
-		//{
-		//	key3 = true;
-		//	llave3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
-		//
-		//}
-		
-
-		//if (isPointInsideSphere(camara->getPos(), llave->getSphere(5), &KeyCollition1)) {
-		//	if (KeyCollition1 == false) {
-		//			llave->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
-		//		//sumar a general
-		//			TotalKeys++;
-		//	}
-		//	KeyCollition1 = true;
-		//}
-
-
+    #pragma endregion
 
         #pragma region Las colisiones lineales
 //Colisiones en X
@@ -805,8 +810,81 @@ public:
 
      #pragma endregion
 
+        #pragma region Aquí los condicionales cuando se resta vida en la barra de vida
+		////TurnOffAlphaBlending();  //antes habia en supercifie (100, 20)
+		//vida3->Draw(-0.86, -0.3);
+		if (vida == 5)
+		{
+		   BarraVida5->Draw(-0.86, -0.3);
+		} 
 
+		if (vida == 4)
+		{
+			BarraVida4->Draw(-0.86, -0.3);
+		}
 
+		if (vida == 3)
+		{
+			BarraVida3->Draw(-0.86, -0.3);
+		}
+
+		if (vida == 2)
+		{
+			BarraVida2->Draw(-0.86, -0.3);
+		}
+
+		if (vida == 1)
+		{
+			BarraVida1->Draw(-0.86, -0.3);
+		}
+
+		if (vida == 0)
+		{
+			BarraVida0->Draw(-0.86, -0.3);
+			Perdiste->Draw(-0.28, 0.4);
+
+		}
+		
+    #pragma endregion
+
+        #pragma region Cuenta regresiva
+
+		//Globales
+		segundos -= 0.033;
+		CuentaRegresiva->DrawText(-0.45, 0.95, "Tiempo: " + CuentaRegresiva->Time(segundos), 0.015);
+		
+
+		if (segundos <= 0)
+		{
+			segundos = 0;
+			//Se dibuja la imagen que te dice que se acaba el tiempo
+			
+			if (TimeShow >= 0)
+
+			{
+				TiempoMuestra->Time(TimeShow);
+				Tiempo->Draw(-0.28, 0.4);
+
+				TimeShow -= 0.033;
+
+			}
+			else
+			{
+				Perdiste->Draw(-0.28, 0.4);
+			}
+			    
+
+			
+			
+		
+			
+		}
+
+		
+		
+		
+		
+        #pragma endregion
 
 
 		swapChain->Present( 1, 0 );
@@ -855,26 +933,6 @@ public:
 	}
 	
 
-	/*
-	bool isPointInsideSphere(float* point, float* sphere, bool* coll) {
-		bool collition = false;
-
-		float distance = sqrt((point[0] - sphere[0]) * (point[0] - sphere[0]) +
-			(point[1] - sphere[1]) * (point[1] - sphere[1]));
-
-		if (distance < sphere[2]) {
-			collition = true;
-		}
-		else if (distance > 5) {
-			effectDone = false;
-		}
-
-		if (distance > 15)
-			*coll = false;
-
-		return collition;
-	}
-	*/
 
 	//Activa el alpha blend para dibujar con transparencias
 	void TurnOnAlphaBlending()
