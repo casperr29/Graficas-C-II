@@ -22,6 +22,11 @@ private:
 	int alto;
 public:	
 
+	int totalKey;
+	bool key1 = false;
+	bool key2 = false;
+	bool key3 = false;
+
 	#pragma region Atributos publicos
 	HINSTANCE hInstance;
 	HWND hWnd;
@@ -53,6 +58,8 @@ public:
 	ModeloRR * bici = 0, * biciLejos = 0;
 	//Modelos
 	ModeloRR* llave = 0;
+	ModeloRR* llave2 = 0;
+	ModeloRR* llave3 = 0;
 	ModeloRR* pelota = 0;
 	ModeloRR* juego = 0;
 	ModeloRR* casa = 0;
@@ -65,8 +72,10 @@ public:
 	ModeloRR* banca = 0;
 	ModeloRR* lampara = 0;
 	ModeloRR* plano = 0;
+
 	//Laberinto
 	ModeloRR* laberinto = 0;
+	ModeloRR* puerta = 0;
 	
 	//GUI
 	GUI* vida3;
@@ -133,7 +142,9 @@ public:
 
 		bici = new ModeloRR(d3dDevice, d3dContext, "Assets/Bici/Manubrio.obj", L"Assets/Bici/Bicicleta_Color.jpg", L"Assets/Bici/Bicicleta_Spec.jpg", 0, 0);
 		biciLejos = new ModeloRR(d3dDevice, d3dContext, "Assets/Bici/Manubrio3erP.obj", L"Assets/Bici/Bicicleta_Color.jpg", L"Assets/Bici/Bicicleta_Spec.jpg", 0, 0);
-		llave = new ModeloRR(d3dDevice, d3dContext, "Assets/Llave/Llave.obj", L"Assets/Llave/Llave Color.jpg", L"Assets/Llave/Llave Specular.jpg", 0, 0);
+		llave = new ModeloRR(d3dDevice, d3dContext, "Assets/Llave/Llave.obj", L"Assets/Llave/Llave Color.jpg", L"Assets/Llave/Llave Specular.jpg", -92, 30);
+		llave2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Llave/Llave2.obj", L"Assets/Llave/Llave Color.jpg", L"Assets/Llave/Llave Specular.jpg", 78, 89);
+		llave3 = new ModeloRR(d3dDevice, d3dContext, "Assets/Llave/Llave3.obj", L"Assets/Llave/Llave Color.jpg", L"Assets/Llave/Llave Specular.jpg", -32, -116);
 		pelota = new ModeloRR(d3dDevice, d3dContext, "Assets/Pelota/Pelota.obj", L"Assets/Pelota/Pelota Color.png", L"Assets/Pelota/Pelota Specular.jpg", 0, 0);
 		juego = new ModeloRR(d3dDevice, d3dContext, "Assets/Juego/Juego.obj", L"Assets/Juego/Juego Color.jpg", L"Assets/Juego/Juego Specular.jpg",0, 0);
 		casa = new ModeloRR(d3dDevice, d3dContext, "Assets/Casa/houseA_obj.obj", L"Assets/Casa/1casa.jpg", L"Assets/Casa/1casaS.jpg", -118, 98);
@@ -151,7 +162,9 @@ public:
 
 		//Modelos para escenario principal
 		laberinto = new ModeloRR(d3dDevice, d3dContext, "Assets/Laberinto/Laberinto.obj", L"Assets/Laberinto/LaberintoColor.jpg", L"Assets/Laberinto/LaberintoSpecular.jpg", 0, 0);
-	//GUI
+		puerta = new ModeloRR(d3dDevice, d3dContext, "Assets/Puerta/Puerta.obj", L"Assets/Puerta/Puerta Color.png", L"Assets/Puerta/Puerta Specular.png", 0, 0);
+		
+		//GUI
 		vida3 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/health_full.png");
 	
 	//Texto
@@ -492,7 +505,6 @@ public:
 		}
 
 
-		llave->Draw(camara->vista, camara->proyeccion, terreno->Superficie(150, 20), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
 		pelota->Draw(camara->vista, camara->proyeccion, terreno->Superficie(300, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
 		juego->Draw(camara->vista, camara->proyeccion, terreno->Superficie(200,0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
 		casa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 1, light->GetDirection(), light->GetDiffuseColor());
@@ -504,12 +516,19 @@ public:
 		rocas->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 		banca->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 		lampara->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
-
 		//plano->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20) + 1, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 
 		laberinto->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0) + 4, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
-
-
+		
+		if (totalKey != 3)
+		{
+			puerta->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0) + 4, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+			CollisionZ(-75, -43, -135, -134, true, 1);
+		}
+		else
+		{
+			CollisionZ(-75, -43, -135, -134, false, 1);
+		}
 
 		//--------------------------------------------------COLISIONES------------------------------
 
@@ -520,7 +539,29 @@ public:
 		// camara->posCam = camara->pastPosCam;
 		//}
 
-							 
+		if (key1 = false)
+		{
+			key1 = true;
+			llave->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
+		
+		}
+
+		if (key2 = false)
+		{
+			key2 = true;
+			llave2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
+
+		}
+
+		if (key3 = false)
+		{
+			key3 = true;
+			llave3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
+
+		}
+
+
+
 
         #pragma region Las colisiones lineales
 //Colisiones en X
@@ -592,7 +633,7 @@ public:
 
 
 		                                                            //*****COLISIÓN DE LA PUERTA******** 
-		                                                            CollisionZ(-75, -43, -135, -134, true, 1);
+		                                                           
 		                                                            //Es una colisión invisible que impide salir de adentro hacia afuera
 		                                                            // donde se ubica el playground, el kiosko y lo demás
 		                                                            //Cuando se implemente bien la puerta, cambien el segundo parámetro (x2)

@@ -1,4 +1,4 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: El directorio intermedio (x64\Debug\) contiene archivos compartidos de otro proyecto (PuebloHalloween.vcxproj, Terreno.vcxproj, TerrenoSky.vcxproj, TerrenoSkyBill.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+﻿D:\Visual Studio\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: El directorio intermedio (x64\Debug\) contiene archivos compartidos de otro proyecto (PuebloHalloween.vcxproj, Terreno.vcxproj, TerrenoSky.vcxproj, TerrenoSkyBill.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
   TerrenoSkyBill.cpp
 C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED': redefinición de macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\winerror.h(56388): message : vea la definición anterior de 'DXGI_STATUS_OCCLUDED'
@@ -118,83 +118,83 @@ C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamathvector.i
 C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamathmisc.inl(518,43): warning C4838: la conversión de 'unsigned int' en 'INT' requiere una conversión de restricción
 C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamathmisc.inl(519,40): warning C4838: la conversión de 'unsigned int' en 'INT' requiere una conversión de restricción
 C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamathmisc.inl(519,51): warning C4838: la conversión de 'unsigned int' en 'INT' requiere una conversión de restricción
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoRR.h(235,86): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoRR.h(366,64): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoRR.h(366,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoRR.h(440,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoRR.h(483,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoRR.h(567,21): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoRR.h(569,19): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Agua.h(233,85): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Agua.h(370,64): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Agua.h(370,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Agua.h(468,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Agua.h(504,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Agua.h(588,22): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Agua.h(590,23): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Camara.h(37,63): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Camara.h(37,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Billboard.h(455,14): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Billboard.h(456,15): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\ModeloRR.h(360,65): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\ModeloRR.h(360,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\ModeloRR.h(430,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\SkyDome.h(354,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\SkyDome.h(356,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\GUI.h(173,29): warning C4244: '=': conversión de 'float' a 'UINT'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\GUI.h(174,31): warning C4244: '=': conversión de 'float' a 'UINT'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\GUI.h(200,21): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\GUI.h(164,33): warning C4101: 'renderTargetViewDesc': variable local sin referencia
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\GUI.h(165,35): warning C4101: 'shaderResourceViewDesc': variable local sin referencia
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\GUI.h(301,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Text.h(194,29): warning C4244: '=': conversión de 'float' a 'UINT'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Text.h(195,31): warning C4244: '=': conversión de 'float' a 'UINT'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Text.h(185,33): warning C4101: 'renderTargetViewDesc': variable local sin referencia
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Text.h(186,35): warning C4101: 'shaderResourceViewDesc': variable local sin referencia
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Text.h(323,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Text.h(346,1): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(119,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(155,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(158,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(306,13): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(429,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(452,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(455,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(459,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(478,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(484,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(490,49): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(499,75): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(529,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(531,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(562,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(564,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(567,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(569,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(572,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(579,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(762,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(763,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(764,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(765,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(773,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(774,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(775,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(776,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(785,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(786,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(787,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(788,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(797,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(798,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(799,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(800,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\TerrenoRR.h(235,86): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\TerrenoRR.h(366,64): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\TerrenoRR.h(366,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\TerrenoRR.h(440,1): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\TerrenoRR.h(483,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\TerrenoRR.h(567,21): warning C4018: '<': no coinciden signed/unsigned
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\TerrenoRR.h(569,19): warning C4018: '<': no coinciden signed/unsigned
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Agua.h(233,85): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Agua.h(370,64): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Agua.h(370,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Agua.h(468,1): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Agua.h(504,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Agua.h(588,22): warning C4018: '<': no coinciden signed/unsigned
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Agua.h(590,23): warning C4018: '<': no coinciden signed/unsigned
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Camara.h(37,63): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Camara.h(37,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Billboard.h(455,14): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Billboard.h(456,15): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\ModeloRR.h(360,65): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\ModeloRR.h(360,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\ModeloRR.h(430,1): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\SkyDome.h(354,1): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\SkyDome.h(356,1): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\GUI.h(173,29): warning C4244: '=': conversión de 'float' a 'UINT'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\GUI.h(174,31): warning C4244: '=': conversión de 'float' a 'UINT'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\GUI.h(200,21): warning C4018: '<': no coinciden signed/unsigned
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\GUI.h(164,33): warning C4101: 'renderTargetViewDesc': variable local sin referencia
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\GUI.h(165,35): warning C4101: 'shaderResourceViewDesc': variable local sin referencia
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\GUI.h(301,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Text.h(194,29): warning C4244: '=': conversión de 'float' a 'UINT'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Text.h(195,31): warning C4244: '=': conversión de 'float' a 'UINT'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Text.h(185,33): warning C4101: 'renderTargetViewDesc': variable local sin referencia
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Text.h(186,35): warning C4101: 'shaderResourceViewDesc': variable local sin referencia
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Text.h(323,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Text.h(346,1): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(128,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(168,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(171,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(319,13): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(442,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(465,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(468,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(472,1): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(491,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(497,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(503,49): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(511,75): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(570,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(572,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(603,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(605,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(608,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(610,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(613,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(620,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(803,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(804,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(805,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(806,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(814,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(815,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(816,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(817,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(826,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(827,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(828,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(829,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(838,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(839,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(840,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\DXRR.h(841,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(153,15): warning C4244: 'return': conversión de 'WPARAM' a 'int'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(272,30): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(276,70): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(281,33): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(282,22): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\GUI.h(159): warning C4715: 'GUI::InitScene': no todas las rutas de acceso de control devuelven un valor
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Text.h(180): warning C4715: 'Text::InitScene': no todas las rutas de acceso de control devuelven un valor
-  v1dx11rr.vcxproj -> C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\x64\Debug\Laberinto.exe
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(153,15): warning C4244: 'return': conversión de 'WPARAM' a 'int'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(272,30): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(276,70): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(281,33): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(282,22): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\GUI.h(159): warning C4715: 'GUI::InitScene': no todas las rutas de acceso de control devuelven un valor
+C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\v1dx11rr\Text.h(180): warning C4715: 'Text::InitScene': no todas las rutas de acceso de control devuelven un valor
+  v1dx11rr.vcxproj -> C:\Unreal Engine 5\UE_5.0\Proyectos\Graficas-C-II\x64\Debug\Laberinto.exe
