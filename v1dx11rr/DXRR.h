@@ -111,8 +111,13 @@ public:
 			posGlobal[1] = 0;
 		#pragma endregion
 
+			                                                  //0, 80, 0
+          //**Esta es la posición donde es el final
+		//camara = new Camara(D3DXVECTOR3(-199.52,80,-49.39), D3DXVECTOR3(10,80,-40), D3DXVECTOR3(0,1,0), Ancho, Alto);
 
-		camara = new Camara(D3DXVECTOR3(-110,80,6), D3DXVECTOR3(0,80,0), D3DXVECTOR3(0,1,0), Ancho, Alto);
+         //Aquí donde comenzaría, se puede cambiar si gustan
+		camara = new Camara(D3DXVECTOR3(-39.794, 80, 196.667), D3DXVECTOR3(400, 80, 0), D3DXVECTOR3(0, 1, 0), Ancho, Alto);
+
 		light = new Light(-30.0f, -50.0f, -30.0f, 0.2f, 0.2f, 1.0f, 1.0f);
 		terreno = new TerrenoRR(480, 480, d3dDevice, d3dContext);
 		lago = new Agua(79, 111, d3dDevice, d3dContext);
@@ -299,8 +304,8 @@ public:
 
 
 		srand(time(0));
-		XACTINDEX cueIndex = rand() % (3 - 0 + 1) + 0;
-		//XACTINDEX cueIndex = m_XACT3.m_pSoundBank->GetCueIndex("ccr_bad_moon");
+		//XACTINDEX cueIndex = rand() % (3 - 0 + 1) + 0;
+		XACTINDEX cueIndex = m_XACT3.m_pSoundBank->GetCueIndex("Forest 1");
 		m_XACT3.m_pSoundBank->Play(cueIndex, 0, 0, 0);
 		return true;			
 		
@@ -508,87 +513,99 @@ public:
 
 		//--------------------------------------------------COLISIONES------------------------------
 
-					 //ESFERICAS--Chinga tu madre Hugo
-					//if (isPointInsideSphere(camara->getPos(), pelota->getSphere(5)))
-					//{
-					// //MessageBox(hWnd, L"Colision", L"Advertencia", MB_OK);
-					// camara->posCam = camara->pastPosCam;
-					//}
+		 //ESFERICAS
+		//if (isPointInsideSphere(camara->getPos(), pelota->getSphere(5)))
+		//{
+		// //MessageBox(hWnd, L"Colision", L"Advertencia", MB_OK);
+		// camara->posCam = camara->pastPosCam;
+		//}
 
-							 //LINEALES
-							 //***Collision(PX1, PX2, Pz1, Pz2, bool, int);***
+							 
 
-									//Colisión de una piedra cerca del laberinto
-								 //	CollisionX(-139, -97, -19, true, 1);
-								 //
-								 //	//Unos pinos por el laberinto
-								 //	CollisionX(-139, -135, -29, true, 1);
-								 //
-								 //	//Otra roca enorme
-								 //	CollisionX(-149, -100, -82, true, 1);
-
-#pragma region Las colisiones de la entrada frente al juego, que por extraña razón dejaron de jalar bien, aiuda
+        #pragma region Las colisiones lineales
 //Colisiones en X
-		CollisionX(-34, 68, 68, 69, true, -1); //Pared interna de lab
+		CollisionX(-54, 101, 113, 114, true, 1); //Pared interna de lab
 
-		CollisionX(-89, -54, 68, 69, true, -1); //Pared interna de lab
-		CollisionX(-89, 64, -86, -85, true, 1); //Pared interna de lab
+		CollisionX(-54, 96.7, 97, 98, true, -1); //Pared interna de lab
 
-		CollisionX(-34.8, 67, 72, 73, true, 1); //Pared EXTERNA de lab
-		CollisionX(-94.6, -51, 72, 73, true, 1); //Pared EXTERNA de lab
+		CollisionX(-141.2, -77, 111, 112, true, 1); //Pared EXTERNA de lab
+		CollisionX(-134, -82, 98, 99, true, -1); //Pared interna de lab
+									
+		CollisionX(-73, -47, 83, 84, true, 1); //Pared interna de lab
+		
+		CollisionX(-82, -47, 67, 68, true, -1); //Pared cerca de salida de laberinto
+		CollisionX(-52, -23, 51, 52, true, 1);
+		CollisionX(-45, -16, 36, 37, true, -1);
+		//Pared de atrás Laberinto
+		CollisionX(-135, 97, -123, -122, true, 1);
+		CollisionX(-140, 102, -140, -139, true, -1);
+		
+		//Donde se ubican las rocas del costado del laberinto
+		CollisionX(-236, -142, -70, -69, true, 1);
+		CollisionX(-236, -142, -38, -37, true, -1);
 
-		CollisionX(-50, -31, 52, 53, true, 1); //Pared cerca de salida de laberinto
-		CollisionX(-54, -31, 47, 48, true, -1); //Pared cerca de salida
+		//Pa que no se salga del terreno
+		CollisionX(-195, -140, 112, 113, true, 1);
+		CollisionX(-235, -197, 157, 158, true, 1);
+		CollisionX(-235, 238, 226, 227, true, -1);
+		CollisionX(103, 228, 123, 124, true, 1);
 
-		CollisionX(-34.9, -15, 33, 34, true, 1);
-		CollisionX(-70, -35, 13, 14, true, 1);
-
-		CollisionX(-69, -50, 28, 29, true, -1);
-		CollisionX(-69, -50, 33, 34, true, 1);
-
-		CollisionX(-74, -31, 8, 9, true, -1);
-		CollisionX(-31, -11, 27, 28, true, -1);
-
-		CollisionX(-121, -94.7, 73, 74, true, 1); //Rocas cerca del laberinto
-
+		//Para la otra entrada que creía que era la salida:(
+		//CollisionX(-73, -50, 99, 100, true, -1);
+		                                            
+													 
+	
 
 
 		//Colisiones en Z
-		CollisionZ(-25, 69, -90, -89, true, 1); //Pared interna lab
-		CollisionZ(-86, -49, -90, -89, true, 1); //Pared interna lab
-		CollisionZ(-86, 67, 63, 64, true, -1); //Pared interna lab
+		CollisionZ(102, 107, -57, -56, true, -1); //Pared cerca de salida
+		CollisionZ(80, 108.7, -73, -72, true, 1); //Pared cerca de salida
 
-		CollisionZ(53, 72, -50, -49, true, 1); //Pared cerca de salida
-		CollisionZ(67, 72, -36, -35, true, -1); //Pared cerca de salida
-		CollisionZ(49, 53, -30, -29, true, 1); //Pared cerca de salida
-		CollisionZ(48, 68, -56, -55, true, -1); //Pared cerca de salida
-		CollisionZ(13, 32.7, -36, -35, true, -1);
+		CollisionZ(73.3, 98, -87, -86, true, -1); //Pared interna cerca de salida
+		//
+		CollisionZ(50, 98, -28, -27, true, -1); 
+		CollisionZ(43.9, 98, -12, -11, true, 1);
 
-		CollisionZ(32, 68.5, -16, -15, true, -1);
+		CollisionZ(72, 78.8, -42, -41, true, 1);
 
-		CollisionZ(12, 52.8, -70, -69, true, 1);
-		CollisionZ(8.9, 52.8, -76, -75, true, -1);
+        //Paredes costados
+		CollisionZ(-45.8, 108, -146, -145, true, -1); 
+		CollisionZ(-135, 109, 108, 109, true, 1);
 
-		CollisionZ(9.41, 28.3, -30, -29, true, 1);
-		CollisionZ(29.6, 68, -10, -9, true, 1);
+		CollisionZ(-129, 98, 90, 91, true, -1);
+		CollisionZ(-39, 98, -130, -129, true, 1);
+	
+		
+		CollisionZ(-134.8, -70, -146, -145, true, -1);
+		CollisionZ(-123, -75, -130, -129, true, 1);
 
+		//Donde está el descanso con los pinos, al costado del laberinto
+		CollisionZ(-76, -26, -230, -229, true, 1);
+
+		//Pa que no se salga
+		CollisionZ(111, 157, -189, -188, true, 1);
+		CollisionZ(149, 238, -228, -227, true, 1);
+
+		CollisionZ(93, 235, 227, 228, true, -1);
+
+		CollisionZ(113, 117, 98, 99, true, -1);
+
+
+		                                                            //*****COLISIÓN DE LA PUERTA******** 
+		                                                            CollisionZ(-75, -43, -135, -134, true, 1);
+		                                                            //Es una colisión invisible que impide salir de adentro hacia afuera
+		                                                            // donde se ubica el playground, el kiosko y lo demás
+		                                                            //Cuando se implemente bien la puerta, cambien el segundo parámetro (x2)
+		                                                            // para que sea más ancha la colisión y no se pueda salir 
+
+
+		//CollisionZ(29.6, 68, -10, -9, true, 1);
 		// CollisionX(-34, 68, 73, true, 1); //pared externa¿
 		// CollisionZ(69, 73, -36, true, -1); //Donde me muevo en X
-
-//			CollisionX(-94, -54, 74, true, 1); //Pared externa de lab
-//	CollisionX(-89, -52, 68, true, -1); //interna
-
-
-	//CollisionZ(49, 72, -56, true, -1);
-	 //CollisionZ(54, 71, -48, true, 1);
 #pragma endregion
-//--------------------------------------------------------------------
 
-//Colisiones de las otras paredes, no todas tienen unu
-   //CollisionZ(-86, 66, 64, true, -1);
-   //CollisionZ(-86, 66, 64, true, 1);
-	   //CollisionX(-93, 68, -92, true, -1); //este sí jala XD
-	   //CollisionX(-92, 66, -83, true, 1); //Este no, son la misma pared
+
+
 
 		swapChain->Present( 1, 0 );
 	}
