@@ -22,7 +22,7 @@ private:
 	int alto;
 public:	
 
-	int totalKey;
+	int TotalKeys = 0;
 	bool key1 = false;
 	bool key2 = false;
 	bool key3 = false;
@@ -79,9 +79,27 @@ public:
 	
 	//GUI
 	GUI* vida3;
+	GUI* Ganaste;
+	GUI* Perdiste;
+	GUI* Tiempo;
+
+	GUI * BarraVida5;
+	GUI * BarraVida4;
+	GUI * BarraVida3;
+	GUI * BarraVida2;
+	GUI * BarraVida1;
+	GUI * BarraVida0; //cuando morimos xd
+
 
 	//Texto
 	Text* Coordenadas;
+
+
+	bool effectDone = false;
+	bool KeyCollition1 = false;
+	bool KeyCollition2 = false;
+	bool KeyCollition3 = false;
+
 
 	float posGlobal[2];
 	float izqder;
@@ -97,6 +115,8 @@ public:
 
 	XACTINDEX cueIndex;
 	CXACT3Util m_XACT3;
+
+
 	#pragma endregion
 
     DXRR(HWND hWnd, int Ancho, int Alto)
@@ -166,6 +186,9 @@ public:
 		
 		//GUI
 		vida3 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/health_full.png");
+		Ganaste = new GUI(d3dDevice, d3dContext, 1.85, 1.6, L"Assets/GUI/Interface/GANASTE.png");
+
+
 	
 	//Texto
 		Coordenadas = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.5f, 0.6f, 0.8f, 1.0f));
@@ -396,6 +419,16 @@ public:
 				delete llave;
 				llave = 0;
 			}
+
+			if (llave2) {
+				delete llave2;
+				llave2 = 0;
+			}
+
+			if (llave3) {
+				delete llave3;
+				llave3 = 0;
+			}
 		#pragma endregion
 
 
@@ -504,7 +537,7 @@ public:
 			biciLejos->Draw(camara->vista, camara->proyeccion, altura, camara->posCam, 10.0f, biciLejos->rotation + 0.9f, 'Y', 1, light->GetDirection(), light->GetDiffuseColor());
 		}
 
-
+		
 		pelota->Draw(camara->vista, camara->proyeccion, terreno->Superficie(300, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
 		juego->Draw(camara->vista, camara->proyeccion, terreno->Superficie(200,0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
 		casa->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 1, light->GetDirection(), light->GetDiffuseColor());
@@ -520,7 +553,7 @@ public:
 
 		laberinto->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0) + 4, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 		
-		if (totalKey != 3)
+		if (TotalKeys != 3)
 		{
 			puerta->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0) + 4, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 			CollisionZ(-75, -43, -135, -134, true, 1);
@@ -528,6 +561,7 @@ public:
 		else
 		{
 			CollisionZ(-75, -43, -135, -134, false, 1);
+			//Poner el otro modelo de la puerta abierta
 		}
 
 		//--------------------------------------------------COLISIONES------------------------------
@@ -539,27 +573,71 @@ public:
 		// camara->posCam = camara->pastPosCam;
 		//}
 
-		if (key1 = false)
+		if (key1 == false)
 		{
-			key1 = true;
 			llave->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
-		
+			
+			if (isPointInsideSphere(camara->getPos(), llave->getSphere(8)))
+			{
+				key1 = true;
+				TotalKeys++;
+			}
 		}
 
-		if (key2 = false)
+		if (key2 == false)
 		{
-			key2 = true;
 			llave2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
 
+			if (isPointInsideSphere(camara->getPos(), llave2->getSphere(8)))
+			{
+				key2 = true;
+				TotalKeys++;
+			}
 		}
 
-		if (key3 = false)
+		if (key3 == false)
 		{
-			key3 = true;
 			llave3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
 
+			if (isPointInsideSphere(camara->getPos(), llave3->getSphere(20)))
+			{
+				key3 = true;
+				TotalKeys++;
+			}
 		}
 
+		//COLISIÓN DE GANADOR
+		
+		//CollisionWin(-70,-42, -140 , -139, true);
+
+		if (camara->posCam.z > -70 && camara->posCam.z<-42 && camara->posCam.x > -140 && camara->posCam.x < -139)
+			Ganaste->Draw(-0.28, 0.4);
+		
+
+
+		//if (key2 = false)
+		//{
+		//	key2 = true;
+		//	llave2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
+		//
+		//}
+		//
+		//if (key3 = false)
+		//{
+		//	key3 = true;
+		//	llave3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
+		//
+		//}
+		
+
+		//if (isPointInsideSphere(camara->getPos(), llave->getSphere(5), &KeyCollition1)) {
+		//	if (KeyCollition1 == false) {
+		//			llave->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
+		//		//sumar a general
+		//			TotalKeys++;
+		//	}
+		//	KeyCollition1 = true;
+		//}
 
 
 
@@ -640,10 +718,11 @@ public:
 		                                                            // para que sea más ancha la colisión y no se pueda salir 
 
 
-		//CollisionZ(29.6, 68, -10, -9, true, 1);
-		// CollisionX(-34, 68, 73, true, 1); //pared externa¿
-		// CollisionZ(69, 73, -36, true, -1); //Donde me muevo en X
-#pragma endregion
+	
+
+
+     #pragma endregion
+
 
 
 
@@ -659,6 +738,16 @@ public:
 				camara->posCam.z = camara->posCam.z + move; //Empuja en Z
 		}
 
+	}
+
+	void CollisionWin(float P1, float P2, float P3, float P4, bool colision)
+	{
+		if (colision)
+		{
+			   if (camara->posCam.x > P1 && camara->posCam.x < P2 && camara->posCam.z > P3 && camara->posCam.z < P4)
+				   Ganaste->Draw(-0.38, 0.4);
+			
+		}
 	}
 
 	//Hace colisión en el eje Z y te empuja en X
@@ -682,6 +771,28 @@ public:
 			collition = true;
 		return collition;
 	}
+	
+
+	/*
+	bool isPointInsideSphere(float* point, float* sphere, bool* coll) {
+		bool collition = false;
+
+		float distance = sqrt((point[0] - sphere[0]) * (point[0] - sphere[0]) +
+			(point[1] - sphere[1]) * (point[1] - sphere[1]));
+
+		if (distance < sphere[2]) {
+			collition = true;
+		}
+		else if (distance > 5) {
+			effectDone = false;
+		}
+
+		if (distance > 15)
+			*coll = false;
+
+		return collition;
+	}
+	*/
 
 	//Activa el alpha blend para dibujar con transparencias
 	void TurnOnAlphaBlending()
