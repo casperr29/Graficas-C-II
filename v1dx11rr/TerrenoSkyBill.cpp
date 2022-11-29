@@ -223,8 +223,8 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
             }
 
             if (keyboardData[DIK_E] & 0x80) {
-                dxrr->m_XACT3.m_pSoundBank->Stop(6, 0);
-                dxrr->m_XACT3.m_pSoundBank->Play(6, 0, 0, 0);
+                dxrr->m_XACT3.m_pSoundBank->Stop(1, 0);
+                dxrr->m_XACT3.m_pSoundBank->Play(1, 0, 0, 0);
                 break;
             }
 
@@ -234,7 +234,7 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
             }
 
             if (keyboardData[DIK_C] & 0x80) {
-                dxrr->m_XACT3.m_pSoundBank->Play(4, 0, 0, 0);
+                dxrr->m_XACT3.m_pSoundBank->Play(0, 0, 0, 0);
                 break;
             }
 
@@ -247,8 +247,11 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 
 			if (keyboardData[DIK_R] & 0x80) {
 
-				std::string coords = "X: " + std::to_string(dxrr->camara->posCam.x) + " Y: " + std::to_string(dxrr->camara->posCam.y) + " Z: " + std::to_string(dxrr->camara->posCam.z);
-				//MessageBox(hWnd, coords.c_str(), NULL, MB_OK);
+                dxrr->ReadPaper = true;
+              }
+              else {
+                dxrr->ReadPaper = false;
+				
 			}
 
             if (keyboardData[DIK_ESCAPE] & 0x80) {

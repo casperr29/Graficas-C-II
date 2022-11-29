@@ -33,6 +33,7 @@ public:
     IXACT3Engine* m_pXACT3Engine;
     IXACT3WaveBank* m_pWaveBank;
     IXACT3SoundBank* m_pSoundBank;
+
     void* m_pWaveBankData;
     void* m_pSoundBankData;
 };

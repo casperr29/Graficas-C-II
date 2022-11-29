@@ -97,6 +97,7 @@ public:
 	GUI* Perdiste;
 	GUI* Tiempo;
 	GUI* Llave;
+	GUI* PaperUI;
 
 	GUI * BarraVida5;
 	GUI * BarraVida4;
@@ -120,6 +121,7 @@ public:
 	float vel2;
 	bool breakpoint;
 	bool inFP = true;
+	bool ReadPaper;
 	
 
 
@@ -141,6 +143,8 @@ public:
 	XACTINDEX YouLose;
 	XACTINDEX Hit;
 
+	CXACT3Util m_InteractivoXACT3;
+
 	#pragma endregion
 
     DXRR(HWND hWnd, int Ancho, int Alto)
@@ -149,8 +153,8 @@ public:
 			breakpoint = false;
 			segundos = 301;
 			TimeShow = 2;
-			TimeWinShow = 6;
-			
+			TimeWinShow = 10;
+			ReadPaper = false;
 			frameBillboard = 0;
 			ancho = Ancho;
 			alto = Alto;
@@ -180,14 +184,13 @@ public:
 		lago = new Agua(79, 111, d3dDevice, d3dContext);
 		//skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"Starter_Content/SkyDome.png");
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"TextTerreno/Sky/SkyD3.png", L"TextTerreno/Sky/SkyT4_ED.jpg", L"TextTerreno/Sky/SkyN4_ED.jpg", light);
-
 		billboard[0] = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
 
 		
 		
 
 		//model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
-
+      #pragma region MODELOS CARGADOS AQUÍ
 		bici = new ModeloRR(d3dDevice, d3dContext, "Assets/Bici/Manubrio.obj", L"Assets/Bici/Bicicleta_Color.jpg", L"Assets/Bici/Bicicleta_Spec.jpg", 0, 0);
 		biciLejos = new ModeloRR(d3dDevice, d3dContext, "Assets/Bici/Manubrio3erP.obj", L"Assets/Bici/Bicicleta_Color.jpg", L"Assets/Bici/Bicicleta_Spec.jpg", 0, 0);
 		llave = new ModeloRR(d3dDevice, d3dContext, "Assets/Llave/Llave.obj", L"Assets/Llave/Llave Color.jpg", L"Assets/Llave/Llave Specular.jpg", -92, 30);
@@ -213,18 +216,19 @@ public:
 		pincho5 = new ModeloRR(d3dDevice, d3dContext, "Assets/Pinchos/Pincho5.obj", L"Assets/Pinchos/Pinchos Color.jpg", L"Assets/Pinchos/Pinchos Specular.jpg", 6, 83);
 
 		//plano = new ModeloRR(d3dDevice, d3dContext, "Assets/Plano/Plano.obj", L"Assets/Kiosko/Kiosko_3 Color.png", L"Assets/Kiosko/Kiosko_3 Specular.png", 0, 0);
-
 		//Modelos para escenario principal
 		laberinto = new ModeloRR(d3dDevice, d3dContext, "Assets/Laberinto/Laberinto.obj", L"Assets/Laberinto/LaberintoColor.jpg", L"Assets/Laberinto/LaberintoSpecular.jpg", 0, 0);
 		puerta = new ModeloRR(d3dDevice, d3dContext, "Assets/Puerta/Puerta.obj", L"Assets/Puerta/Puerta Color.png", L"Assets/Puerta/Puerta Specular.png", 0, 0);
-		
-	//GUI
-	vida3 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/health_full.png");
-	//Mensajes del GUI
-	Ganaste = new GUI(d3dDevice, d3dContext, 1.85, 1.6, L"Assets/GUI/Interface/GANASTE.png");
-	Perdiste = new GUI(d3dDevice, d3dContext, 1.80, 1.5, L"Assets/GUI/Interface/PERDISTE.png");
-	Tiempo = new GUI(d3dDevice, d3dContext, 1.85, 1.6, L"Assets/GUI/Interface/TIEMPO.png");
-	Llave = new GUI(d3dDevice, d3dContext, 0.13, 0.08, L"Assets/GUI/Llave.png");
+
+      #pragma endregion 
+
+	   //GUI
+	   Ganaste = new GUI(d3dDevice, d3dContext, 1.85, 1.6, L"Assets/GUI/Interface/GANASTE.png");
+	   Perdiste = new GUI(d3dDevice, d3dContext, 1.80, 1.5, L"Assets/GUI/Interface/PERDISTE.png");
+	   Tiempo = new GUI(d3dDevice, d3dContext, 1.85, 1.6, L"Assets/GUI/Interface/TIEMPO.png");
+	   Llave = new GUI(d3dDevice, d3dContext, 0.13, 0.08, L"Assets/GUI/Llave.png");
+	   PaperUI = new GUI(d3dDevice, d3dContext, 1.55, 1.4, L"Assets/GUI/Interface/Objetivos.png");
+
 
 		//Cuando te vayas quedando sin vida 
 		BarraVida5 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/BarraVidas/Vida_5.png");
@@ -236,18 +240,20 @@ public:
 
 
 	
-	//Texto
+	   //Texto
 		Coordenadas = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.5f, 0.6f, 0.8f, 1.0f));
-		CuentaRegresiva = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
+		CuentaRegresiva = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f));
+
 		TiempoMuestra = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
 		TiempoMuestraGanar = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
-		TotalK = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
+		TotalK = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f));
 	}
 
 	~DXRR()
 	{
 		LiberaD3D();
 		m_XACT3.Terminate();
+		m_InteractivoXACT3.Terminate();
 	}
 	
 	bool IniciaD3D(HWND hWnd)
@@ -382,9 +388,9 @@ public:
 		// Initialize XACT3
 		bool compileResult = m_XACT3.Initialize();
 		if (!compileResult) return false;
-		compileResult = m_XACT3.LoadWaveBank(L"Audio\\Win\\WaveBank.xwb");
+		compileResult = m_XACT3.LoadWaveBank(L"InteractiveS\\Win\\MyBank.xwb");
 		if (!compileResult) return false;
-		compileResult = m_XACT3.LoadSoundBank(L"Audio\\Win\\SoundBank.xsb");
+		compileResult = m_XACT3.LoadSoundBank(L"InteractiveS\\Win\\SoundBank.xsb");
 		if (!compileResult) return false;
 
 
@@ -393,10 +399,23 @@ public:
 		XACTINDEX cueIndex = m_XACT3.m_pSoundBank->GetCueIndex("Forest 1");
 		m_XACT3.m_pSoundBank->Play(cueIndex, 0, 0, 0);
 
-		MusicWin = m_XACT3.m_pSoundBank->GetCueIndex("VictoryMusic");
-		YouLose = m_XACT3.m_pSoundBank->GetCueIndex("YouLose");
-		Item = m_XACT3.m_pSoundBank->GetCueIndex("GrabItem");
-		Hit = m_XACT3.m_pSoundBank->GetCueIndex("Golpe");
+
+
+		////INICIALIZAMOS NUESTROS SONIDOS INTERACTIVOS
+		//bool Compilado = m_InteractivoXACT3.Initialize();
+		//if (!Compilado) return false;
+		//Compilado = m_InteractivoXACT3.LoadWaveBank(L"InteractiveS\\Win\\MyBank.xwb");
+		//if (!Compilado) return false;
+		//compileResult = m_InteractivoXACT3.LoadSoundBank(L"InteractiveS\\Win\\SoundBank.xsb");
+		//if (!Compilado) return false;
+
+		
+		
+
+		//MusicWin = m_InteractivoXACT3.m_pSoundBank->GetCueIndex("VictoryMusic");
+		//YouLose = m_InteractivoXACT3.m_pSoundBank->GetCueIndex("YouLose");
+		//Item = m_InteractivoXACT3.m_pSoundBank->GetCueIndex("GrabItem");
+		//Hit = m_InteractivoXACT3.m_pSoundBank->GetCueIndex("Golpe");
 
 		
 		return true;			
@@ -509,6 +528,10 @@ public:
 	
 	void Render(void)
 	{
+		//Trabaja el XACT
+		m_XACT3.DoWork();
+		m_InteractivoXACT3.DoWork();
+
 		float sphere[3] = { 0,0,0 };
 		float prevPos[3] = { camara->posCam.x, camara->posCam.z, camara->posCam.z };
 		static float angle = 0.0f;
@@ -548,14 +571,10 @@ public:
 
 		skydome->Update(camara->vista, camara->proyeccion);
 
-		float camPosXZ[2] = { camara->posCam.x, camara->posCam.z };
-		stringstream ss;
-		ss << camara->posCam.x;
-		Coordenadas->DrawText(-0.95, 0.95, "X: " + ss.str(), 0.01);
-		ss.str(std::string());
-		ss << camara->posCam.z;
-		Coordenadas->DrawText(-0.95, 0.85, "Z: " + ss.str(), 0.01);
-
+		
+		
+		
+		
 
 		static float onda = 0.0;
 		onda += 0.01;
@@ -609,6 +628,16 @@ public:
 
 		laberinto->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0) + 4, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 		
+
+		//float camPosXZ[2] = { camara->posCam.x, camara->posCam.z };
+		//stringstream ss;
+		//ss << camara->posCam.x;
+		//Coordenadas->DrawText(-0.95, 0.95, "X: " + ss.str(), 0.01);
+		//ss.str(std::string());
+		//ss << camara->posCam.z;
+		//Coordenadas->DrawText(-0.95, 0.85, "Z: " + ss.str(), 0.01);
+
+
 		if (TotalKeys != 3)
 		{
 			puerta->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0) + 4, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
@@ -620,6 +649,11 @@ public:
 			//Poner el otro modelo de la puerta abierta
 		}
 
+		//Leer los objetivos
+		if (ReadPaper == true)
+		{
+			PaperUI->Draw(-0.28, 0.33);
+		}
 		//--------------------------------------------------COLISIONES------------------------------
 
 		 //ESFERICAS
@@ -630,103 +664,52 @@ public:
 		//}
 		
 
-        #pragma region Lógica de las llaves y los pinchos
 
-		Llave->Draw(0.28, 0.93);
-		string sTotalKeys = std::to_string(TotalKeys);
-		TotalK->DrawText(0.32, 0.89, ": " + sTotalKeys, 0.015);
 
-		if (key1 == false)
+        #pragma region Cuando se resta vida en la barra de vida y PIERDES
+		////TurnOffAlphaBlending();  //antes habia en supercifie (100, 20)
+		//vida3->Draw(-0.86, -0.3);
+		if (vida == 5)
 		{
-			llave->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
-			
-			if (isPointInsideSphere(camara->getPos(), llave->getSphere(8)))
-			{
-				key1 = true;
-				TotalKeys++;
-			}
+		   BarraVida5->Draw(-0.86, -0.3);
+		} 
+
+		if (vida == 4)
+		{
+			BarraVida4->Draw(-0.86, -0.3);
 		}
 
-		if (key2 == false)
+		if (vida == 3)
 		{
-			llave2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
-
-			if (isPointInsideSphere(camara->getPos(), llave2->getSphere(8)))
-			{
-				key2 = true;
-				TotalKeys++;
-			}
+			BarraVida3->Draw(-0.86, -0.3);
 		}
 
-		if (key3 == false)
+		if (vida == 2)
 		{
-			llave3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
-
-			if (isPointInsideSphere(camara->getPos(), llave3->getSphere(20)))
-			{
-				key3 = true;
-				TotalKeys++;
-			}
+			BarraVida2->Draw(-0.86, -0.3);
 		}
 
-		//Colision de pinchazo
-
-		if (pinchos1 == false)
+		if (vida == 1)
 		{
-			pincho1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
-			if (isPointInsideSphere(camara->getPos(), pincho1->getSphere(8)))
-			{
-				m_XACT3.m_pSoundBank->Play(Hit, 0, 0, 0);
-				vida = vida - 1;
-				pinchos1 = true;
-			}
+			BarraVida1->Draw(-0.86, -0.3);
 		}
 
-		if (pinchos2 == false)
-		{
-			pincho2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
-			if (isPointInsideSphere(camara->getPos(), pincho2->getSphere(8)))
-			{
-				m_XACT3.m_pSoundBank->Play(Hit, 0, 0, 0);
-				vida = vida - 1;
-				pinchos2 = true;
-			}
-		}
+		//Globales
+	
 
-		if (pinchos3 == false)
+		if (vida == 0)
 		{
-			pincho3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
-			if (isPointInsideSphere(camara->getPos(), pincho3->getSphere(8)))
+			BarraVida0->Draw(-0.86, -0.3);
+			Perdiste->Draw(-0.28, 0.4);
+			if (segundos >= 0)
 			{
-				m_XACT3.m_pSoundBank->Play(Hit, 0, 0, 0);
-				vida = vida - 1;
-				pinchos3 = true;
+			  segundos = 300;
 			}
-		}
 
-		if (pinchos4 == false)
-		{
-			pincho4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
-			if (isPointInsideSphere(camara->getPos(), pincho4->getSphere(8)))
-			{
-				m_XACT3.m_pSoundBank->Play(Hit, 0, 0, 0);
-				vida = vida - 1;
-				pinchos4 = true;
-			}
-		}
 
-		if (pinchos5 == false)
-		{
-			pincho5->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
-			if (isPointInsideSphere(camara->getPos(), pincho5->getSphere(8)))
-			{
-				m_XACT3.m_pSoundBank->Play(Hit, 0, 0, 0);
-				vida = vida - 1;
-				pinchos5 = true;
-			}
 		}
-
-     #pragma endregion
+		
+    #pragma endregion
 	    
         #pragma region Cuando ganas pasa esto
 		//COLISIÓN DE GANADOR
@@ -736,12 +719,12 @@ public:
 		if (camara->posCam.z > -72 && camara->posCam.z<-42 && camara->posCam.x > -228 && camara->posCam.x < -136)
 		{
 			
-			if (TimeWinShow >= 0)
+			if (TimeWinShow >= 0 && TotalKeys == 3)
 			{
 				m_XACT3.m_pSoundBank->Play(MusicWin, 0, 0, 0);
 				TiempoMuestraGanar->Time(TimeShow);
 				Ganaste->Draw(-0.28, 0.4);
-				TimeWinShow -= 0.033;
+				TimeWinShow -= 0.02;
 			}
 			else {
 			      //Poner condicionales de que te faltan tantas llaves aquí
@@ -750,6 +733,7 @@ public:
 		}
 
 
+		
 		
     #pragma endregion
 
@@ -835,54 +819,112 @@ public:
 
      #pragma endregion
 
-        #pragma region Aquí los condicionales cuando se resta vida en la barra de vida
-		////TurnOffAlphaBlending();  //antes habia en supercifie (100, 20)
-		//vida3->Draw(-0.86, -0.3);
-		if (vida == 5)
-		{
-		   BarraVida5->Draw(-0.86, -0.3);
-		} 
+        #pragma region Lógica de las llaves y los pinchos
 
-		if (vida == 4)
-		{
-			BarraVida4->Draw(-0.86, -0.3);
-		}
+		Llave->Draw(0.28, 0.93);
+		string sTotalKeys = std::to_string(TotalKeys);
+		TotalK->DrawText(0.32, 0.89, ": " + sTotalKeys, 0.015);
 
-		if (vida == 3)
+		if (key1 == false)
 		{
-			BarraVida3->Draw(-0.86, -0.3);
-		}
-
-		if (vida == 2)
-		{
-			BarraVida2->Draw(-0.86, -0.3);
-		}
-
-		if (vida == 1)
-		{
-			BarraVida1->Draw(-0.86, -0.3);
-		}
-
-		if (vida == 0)
-		{
-			BarraVida0->Draw(-0.86, -0.3);
-			Perdiste->Draw(-0.28, 0.4);
-			if (segundos >= 0)
+			llave->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
+			
+			if (isPointInsideSphere(camara->getPos(), llave->getSphere(8)))
 			{
-			  segundos = segundos;
+				//m_InteractivoXACT3.m_pMySB->Play(2, 0, 0, 0);
+				key1 = true;
+				TotalKeys++;
 			}
-
-
 		}
-		
-    #pragma endregion
+
+		if (key2 == false)
+		{
+			llave2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
+
+			if (isPointInsideSphere(camara->getPos(), llave2->getSphere(8)))
+			{
+				
+				key2 = true;
+				TotalKeys++;
+			}
+		}
+
+		if (key3 == false)
+		{
+			llave3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 10.0f, 0, 'A', 2, light->GetDirection(), light->GetDiffuseColor());
+
+			if (isPointInsideSphere(camara->getPos(), llave3->getSphere(20)))
+			{
+				
+				key3 = true;
+				TotalKeys++;
+			}
+		}
+
+		//Colision de pinchazo
+
+		if (pinchos1 == false)
+		{
+			pincho1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+			if (isPointInsideSphere(camara->getPos(), pincho1->getSphere(8)))
+			{
+				
+				vida = vida - 1;
+				pinchos1 = true;
+			}
+		}
+
+		if (pinchos2 == false)
+		{
+			pincho2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+			if (isPointInsideSphere(camara->getPos(), pincho2->getSphere(8)))
+			{
+				
+				vida = vida - 1;
+				pinchos2 = true;
+			}
+		}
+
+		if (pinchos3 == false)
+		{
+			pincho3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+			if (isPointInsideSphere(camara->getPos(), pincho3->getSphere(8)))
+			{
+				
+				vida = vida - 1;
+				pinchos3 = true;
+			}
+		}
+
+		if (pinchos4 == false)
+		{
+			pincho4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+			if (isPointInsideSphere(camara->getPos(), pincho4->getSphere(8)))
+			{
+			
+				vida = vida - 1;
+				pinchos4 = true;
+			}
+		}
+
+		if (pinchos5 == false)
+		{
+			pincho5->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
+			if (isPointInsideSphere(camara->getPos(), pincho5->getSphere(8)))
+			{
+				
+				vida = vida - 1;
+				pinchos5 = true;
+			}
+		}
+
+     #pragma endregion
 
         #pragma region Cuenta regresiva
 
-		//Globales
-		segundos -= 0.033;
-		CuentaRegresiva->DrawText(-0.45, 0.95, "Tiempo: " + CuentaRegresiva->Time(segundos), 0.015);
 		
+		CuentaRegresiva->DrawText(-0.45, 0.95, "Tiempo: " + CuentaRegresiva->Time(segundos), 0.015);
+		segundos -= 0.02;
 
 		if (segundos <= 0)
 		{
@@ -895,18 +937,13 @@ public:
 				TiempoMuestra->Time(TimeShow);
 				Tiempo->Draw(-0.28, 0.4);
 
-				TimeShow -= 0.033;
+				TimeShow -= 0.02;
 
 			}
 			else
 			{
 				Perdiste->Draw(-0.28, 0.4);
 			}
-			    
-
-			
-			
-		
 			
 		}
 
