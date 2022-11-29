@@ -96,6 +96,7 @@ public:
 	GUI* Ganaste;
 	GUI* Perdiste;
 	GUI* Tiempo;
+	GUI* Llave;
 
 	GUI * BarraVida5;
 	GUI * BarraVida4;
@@ -110,7 +111,7 @@ public:
 	Text* CuentaRegresiva;
 	Text* TiempoMuestra;
 	Text* TiempoMuestraGanar;
-
+	Text* TotalK;
 
 	float posGlobal[2];
 	float izqder;
@@ -119,6 +120,8 @@ public:
 	float vel2;
 	bool breakpoint;
 	bool inFP = true;
+	
+
 
 	//Para el tiempo
 	float segundos;
@@ -133,6 +136,10 @@ public:
 	XACTINDEX cueIndex;
 	CXACT3Util m_XACT3;
 
+	XACTINDEX MusicWin;
+	XACTINDEX Item;
+	XACTINDEX YouLose;
+	XACTINDEX Hit;
 
 	#pragma endregion
 
@@ -143,7 +150,7 @@ public:
 			segundos = 301;
 			TimeShow = 2;
 			TimeWinShow = 6;
-
+			
 			frameBillboard = 0;
 			ancho = Ancho;
 			alto = Alto;
@@ -217,7 +224,7 @@ public:
 	Ganaste = new GUI(d3dDevice, d3dContext, 1.85, 1.6, L"Assets/GUI/Interface/GANASTE.png");
 	Perdiste = new GUI(d3dDevice, d3dContext, 1.80, 1.5, L"Assets/GUI/Interface/PERDISTE.png");
 	Tiempo = new GUI(d3dDevice, d3dContext, 1.85, 1.6, L"Assets/GUI/Interface/TIEMPO.png");
-
+	Llave = new GUI(d3dDevice, d3dContext, 0.13, 0.08, L"Assets/GUI/Llave.png");
 
 		//Cuando te vayas quedando sin vida 
 		BarraVida5 = new GUI(d3dDevice, d3dContext, 0.15, 0.26, L"Assets/GUI/BarraVidas/Vida_5.png");
@@ -234,6 +241,7 @@ public:
 		CuentaRegresiva = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
 		TiempoMuestra = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
 		TiempoMuestraGanar = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
+		TotalK = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
 	}
 
 	~DXRR()
@@ -384,6 +392,13 @@ public:
 		//XACTINDEX cueIndex = rand() % (3 - 0 + 1) + 0;
 		XACTINDEX cueIndex = m_XACT3.m_pSoundBank->GetCueIndex("Forest 1");
 		m_XACT3.m_pSoundBank->Play(cueIndex, 0, 0, 0);
+
+		MusicWin = m_XACT3.m_pSoundBank->GetCueIndex("VictoryMusic");
+		YouLose = m_XACT3.m_pSoundBank->GetCueIndex("YouLose");
+		Item = m_XACT3.m_pSoundBank->GetCueIndex("GrabItem");
+		Hit = m_XACT3.m_pSoundBank->GetCueIndex("Golpe");
+
+		
 		return true;			
 		
 	}
@@ -617,6 +632,9 @@ public:
 
         #pragma region Lógica de las llaves y los pinchos
 
+		Llave->Draw(0.28, 0.93);
+		string sTotalKeys = std::to_string(TotalKeys);
+		TotalK->DrawText(0.32, 0.89, ": " + sTotalKeys, 0.015);
 
 		if (key1 == false)
 		{
@@ -658,6 +676,7 @@ public:
 			pincho1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 			if (isPointInsideSphere(camara->getPos(), pincho1->getSphere(8)))
 			{
+				m_XACT3.m_pSoundBank->Play(Hit, 0, 0, 0);
 				vida = vida - 1;
 				pinchos1 = true;
 			}
@@ -668,6 +687,7 @@ public:
 			pincho2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 			if (isPointInsideSphere(camara->getPos(), pincho2->getSphere(8)))
 			{
+				m_XACT3.m_pSoundBank->Play(Hit, 0, 0, 0);
 				vida = vida - 1;
 				pinchos2 = true;
 			}
@@ -678,6 +698,7 @@ public:
 			pincho3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 			if (isPointInsideSphere(camara->getPos(), pincho3->getSphere(8)))
 			{
+				m_XACT3.m_pSoundBank->Play(Hit, 0, 0, 0);
 				vida = vida - 1;
 				pinchos3 = true;
 			}
@@ -688,6 +709,7 @@ public:
 			pincho4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 			if (isPointInsideSphere(camara->getPos(), pincho4->getSphere(8)))
 			{
+				m_XACT3.m_pSoundBank->Play(Hit, 0, 0, 0);
 				vida = vida - 1;
 				pinchos4 = true;
 			}
@@ -698,6 +720,7 @@ public:
 			pincho5->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 			if (isPointInsideSphere(camara->getPos(), pincho5->getSphere(8)))
 			{
+				m_XACT3.m_pSoundBank->Play(Hit, 0, 0, 0);
 				vida = vida - 1;
 				pinchos5 = true;
 			}
@@ -709,11 +732,13 @@ public:
 		//COLISIÓN DE GANADOR
 		
 		//CollisionWin(-70,-42, -140 , -139, true);
-
-		if (camara->posCam.z > -72 && camara->posCam.z<-42 && camara->posCam.x > -228 && camara->posCam.x < -139)
+		
+		if (camara->posCam.z > -72 && camara->posCam.z<-42 && camara->posCam.x > -228 && camara->posCam.x < -136)
 		{
-			if (TimeWinShow >= 0 && TotalKeys == 3)
+			
+			if (TimeWinShow >= 0)
 			{
+				m_XACT3.m_pSoundBank->Play(MusicWin, 0, 0, 0);
 				TiempoMuestraGanar->Time(TimeShow);
 				Ganaste->Draw(-0.28, 0.4);
 				TimeWinShow -= 0.033;
@@ -842,6 +867,11 @@ public:
 		{
 			BarraVida0->Draw(-0.86, -0.3);
 			Perdiste->Draw(-0.28, 0.4);
+			if (segundos >= 0)
+			{
+			  segundos = segundos;
+			}
+
 
 		}
 		
