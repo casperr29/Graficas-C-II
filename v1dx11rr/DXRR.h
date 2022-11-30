@@ -194,10 +194,10 @@ public:
 		lago = new Agua(79, 111, d3dDevice, d3dContext);
 		//skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"Starter_Content/SkyDome.png");
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"TextTerreno/Sky/SkyD3.png", L"TextTerreno/Sky/SkyT4_ED.jpg", L"TextTerreno/Sky/SkyN4_ED.jpg", light);
-		billboard[0] = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
+		//billboard[0] = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
 
-		
-		
+		billboard[0] = new BillboardRR(L"Assets/Billboards/Mountain1.png", L"Assets/Billboards/Mountain1Normal.png", d3dDevice, d3dContext, 1);
+		billboard[1] = new BillboardRR(L"Assets/Billboards/Mountain1.png", L"Assets/Billboards/Mountain1Normal.png", d3dDevice, d3dContext, 1);
 
 		//model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
       #pragma region MODELOS CARGADOS AQUÍ
@@ -599,8 +599,15 @@ public:
 		lago->Draw(camara->vista, camara->proyeccion, camara->posCam, onda, light->GetDirection(), light->GetDiffuseColor(), 79.3f, -3.0f, 111.1f);
 
 		//TurnOnAlphaBlending();
+		/*billboard[0]->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-11, -78, 4, 5, 1, 1, uv1, uv2, uv3, uv4, frameBillboard, 'D', neutralLightD, neutralLightC);*/
+
 		billboard[0]->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-11, -78, 4, 5, 1, 1, uv1, uv2, uv3, uv4, frameBillboard, 'D', neutralLightD, neutralLightC);
+			-250.0f, 50.0f, terreno->Superficie(-10.0f, 3.0f) - 0.1f,
+			60, 6, 1, 0, 0, 0, 0, 0, 'S', light->GetDirection(), light->GetDiffuseColor(), 'Y', 0);
+		billboard[0]->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-250.0f, -150.0f, terreno->Superficie(-10.0f, 3.0f) - 0.1f,
+			60, 6, 1, 0, 0, 0, 0, 0, 'S', light->GetDirection(), light->GetDiffuseColor(), 'Y', 0);
 
 		////(vita, proyección, altura en Y, posición de la cámara, fuerza especular, ángulo de rotación, angulo en que se rotará, escala)
 		if (inFP) {

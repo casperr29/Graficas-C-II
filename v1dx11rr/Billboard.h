@@ -350,7 +350,8 @@ public:
 	}
 
 	void Draw(D3DXMATRIX vista, D3DXMATRIX proyeccion, D3DXVECTOR3 poscam, float xx, float zz, float posy, float escala, float escalax, float escalay, 
-		vector2* uv1, vector2* uv2, vector2* uv3, vector2* uv4, int frame, char type, float* lightDir, float* lightColor)
+		vector2* uv1, vector2* uv2, vector2* uv3, vector2* uv4, 
+		int frame, char type, float* lightDir, float* lightColor, char rotAngle, float rot)
 	{
 		posx = xx;
 		posz = zz;
@@ -456,10 +457,25 @@ public:
 		float angle = acos(difx / dist);// * (180.0 / D3DX_PI);
 
 		D3DXMATRIX rotationMat;
-		D3DXMatrixIdentity(&rotationMat);
-		rotationMat._11 = rotationMat._33 = difx / dist;
-		rotationMat._13 = difz / dist;
-		rotationMat._31 = -rotationMat._13;
+
+		if (type == 'S') {
+			//mueve la camara
+			D3DXMatrixRotationYawPitchRoll(&rotationMat, 0.0f, 0.0f, 0.0f);
+			
+			if (rotAngle == 'X')
+				D3DXMatrixRotationX(&rotationMat, rot);
+			else if (rotAngle == 'Y')
+				D3DXMatrixRotationY(&rotationMat, rot);
+			else if (rotAngle == 'Z')
+				D3DXMatrixRotationZ(&rotationMat, rot);
+			viewMatrix *= rotationMat;
+		}
+		else {
+			D3DXMatrixIdentity(&rotationMat);
+			rotationMat._11 = rotationMat._33 = difx / dist;
+			rotationMat._13 = difz / dist;
+			rotationMat._31 = -rotationMat._13;
+		}
 
 		D3DXMATRIX translationMat;
 		D3DXMatrixTranslation(&translationMat, posx, posy, posz);
