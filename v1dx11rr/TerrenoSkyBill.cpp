@@ -316,3 +316,12 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 
 
 
+//Lista de los sonidos (XACT3)
+// 0- Musica de Victoria
+// 1- Agarrar Item --Deberíamos cambiarlo
+// 2- Golpe --Cuando recibimos daño o cuando nos pegamos con la puerta
+// 3- Sonido ambiental
+// 4- El sonido del timbre de la bicicleta
+// 5- Música de que perdiste
+// 6- Reloj timbrando o sonando
+// 7- Sonido de cambio de página --Implementado a la hoja de objetivos

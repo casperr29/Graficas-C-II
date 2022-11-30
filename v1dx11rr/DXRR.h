@@ -113,6 +113,8 @@ public:
 	Text* TiempoMuestra;
 	Text* TiempoMuestraGanar;
 	Text* TotalK;
+	Text* TextoGanador;
+	Text* TextoGanador2;
 
 	float posGlobal[2];
 	float izqder;
@@ -122,7 +124,10 @@ public:
 	bool breakpoint;
 	bool inFP = true;
 	bool ReadPaper;
-	
+	int MePega;
+	bool MusicaWin;
+	bool I_Win;
+	float TotTime;
 
 
 	//Para el tiempo
@@ -151,10 +156,11 @@ public:
 	{
 		#pragma region Inicializacion
 			breakpoint = false;
-			segundos = 5;
+			segundos = 10;
 			TimeShow = 3;
-			TimeWinShow = 10;
+			TimeWinShow = 1.5;
 			ReadPaper = false;
+			MusicaWin = false;
 			frameBillboard = 0;
 			ancho = Ancho;
 			alto = Alto;
@@ -170,6 +176,10 @@ public:
 			billCargaFuego();
 			posGlobal[0] = 0;
 			posGlobal[1] = 0;
+			MePega = 0;
+
+			I_Win = false;
+			TotTime = 0; 
 		#pragma endregion
 
 			                                                  //0, 80, 0
@@ -247,7 +257,9 @@ public:
 		TiempoMuestra = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
 		TiempoMuestraGanar = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f));
 		TotalK = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f));
-	}
+		TextoGanador = new Text(d3dDevice, d3dContext, 5.6, 3.2, L"Assets/GUI/font.jpg", XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f));
+		TextoGanador2 = new Text(d3dDevice, d3dContext, 5.6, 3.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.0f, 0.7f, 0.0f, 1.0f));
+    }
 
 	~DXRR()
 	{
@@ -628,7 +640,8 @@ public:
 
 		laberinto->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0) + 4, camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 		
-
+		stringstream ss_textoFinal;
+		string sTiempo;
 		//float camPosXZ[2] = { camara->posCam.x, camara->posCam.z };
 		//stringstream ss;
 		//ss << camara->posCam.x;
@@ -666,82 +679,55 @@ public:
 		//}
 		
 
+		//if (TotalKeys == 3)
+		//{
+		//	I_Win = true;
+		//}
 
-
-        #pragma region Cuando se resta vida en la barra de vida y PIERDES
-		////TurnOffAlphaBlending();  //antes habia en supercifie (100, 20)
-		//vida3->Draw(-0.86, -0.3);
-		if (vida == 5)
-		{
-		   BarraVida5->Draw(-0.86, -0.3);
-		} 
-
-		if (vida == 4)
-		{
-			BarraVida4->Draw(-0.86, -0.3);
-		}
-
-		if (vida == 3)
-		{
-			BarraVida3->Draw(-0.86, -0.3);
-		}
-
-		if (vida == 2)
-		{
-			BarraVida2->Draw(-0.86, -0.3);
-		}
-
-		if (vida == 1)
-		{
-			BarraVida1->Draw(-0.86, -0.3);
-		}
-
-		//Globales
-	
-
-		if (vida == 0)
-		{
-			BarraVida0->Draw(-0.86, -0.3);
-			m_XACT3.m_pSoundBank->Stop(5, 0);
-			m_XACT3.m_pSoundBank->Play(5, 0, 0, 0);
-			Perdiste->Draw(-0.28, 0.4);
-			
-			if (segundos >= 0)
-			{
-			  segundos = 300;
-			}
-
-
-		}
-		
-    #pragma endregion
 	    
         #pragma region Cuando ganas pasa esto
 		//COLISIÓN DE GANADOR
 		
-		//CollisionWin(-70,-42, -140 , -139, true);
+		//CollisionWin(-70,-42, -140 , -139, true); 
 		
-		if (camara->posCam.z > -72 && camara->posCam.z<-42 && camara->posCam.x > -228 && camara->posCam.x < -132)
+		if (camara->posCam.z > -72  && camara->posCam.z<-42 && camara->posCam.x > -228 && camara->posCam.x < -132)
 		{
 			
 			if (TimeWinShow >= 0 && TotalKeys == 3)
 			{
+				
+				MusicaWin = true;
+				if (MusicaWin == true &&
+					camara->posCam.z > -72 && camara->posCam.z<-42 && camara->posCam.x > -228 && camara->posCam.x < -124)
+				{
+					m_XACT3.m_pSoundBank->Stop(0, 0);
+					m_XACT3.m_pSoundBank->Play(0, 0, 0, 0);
+				}
 				TiempoMuestraGanar->Time(TimeShow);
 				Ganaste->Draw(-0.28, 0.4);
 				m_XACT3.m_pSoundBank->Stop(0, 0);
 				m_XACT3.m_pSoundBank->Play(0, 0, 0, 0);
+				
 				TimeWinShow -= 0.02;
 			}
 			else {
-				if(TotalKeys < 3)
-			      //Poner condicionales de que te faltan tantas llaves aquí
+				if (TotalKeys < 3)
+				{
+					//Poner condicionales de que te faltan tantas llaves aquí
 					camara->posCam.x = camara->posCam.x + 1;
-				m_XACT3.m_pSoundBank->Stop(2, 0);
-				m_XACT3.m_pSoundBank->Play(2, 0, 0, 0);
+					m_XACT3.m_pSoundBank->Stop(2, 0);
+					m_XACT3.m_pSoundBank->Play(2, 0, 0, 0);
+
+				}else 
+					if (TotalKeys == 3)
+					{
+						I_Win = true;
+					}
+			     
 			}
 
 		}
-
+		
 
 		
 		
@@ -886,6 +872,7 @@ public:
 				m_XACT3.m_pSoundBank->Play(2, 0, 0, 0);
 				vida = vida - 1;
 				pinchos1 = true;
+		
 			}
 		}
 
@@ -910,6 +897,7 @@ public:
 				m_XACT3.m_pSoundBank->Play(2, 0, 0, 0);
 				vida = vida - 1;
 				pinchos3 = true;
+				
 			}
 		}
 
@@ -934,16 +922,86 @@ public:
 				m_XACT3.m_pSoundBank->Play(2, 0, 0, 0);
 				vida = vida - 1;
 				pinchos5 = true;
+				
 			}
 		}
 
      #pragma endregion
 
-        #pragma region Cuenta regresiva
-
+        #pragma region Cuando se resta vida en la barra de vida y PIERDES
+		////TurnOffAlphaBlending();  //antes habia en supercifie (100, 20)
+		//vida3->Draw(-0.86, -0.3);
 		
-		CuentaRegresiva->DrawText(-0.45, 0.95, "Tiempo: " + CuentaRegresiva->Time(segundos), 0.015);
-		segundos -= 0.02;
+
+		if (vida == 5)
+		{
+		   BarraVida5->Draw(-0.86, -0.3);
+
+		} 
+
+		if (vida == 4)
+		{
+			BarraVida4->Draw(-0.86, -0.3);
+		}
+
+		if (vida == 3)
+		{
+			BarraVida3->Draw(-0.86, -0.3);
+		}
+
+		if (vida == 2)
+		{
+			BarraVida2->Draw(-0.86, -0.3);
+		}
+
+		if (vida == 1)
+		{
+			BarraVida1->Draw(-0.86, -0.3);
+		}
+
+		//Globales
+		//if (MePega == 5)
+		//{
+		//	m_XACT3.m_pSoundBank->Stop(5, 0);
+		//	m_XACT3.m_pSoundBank->Play(5, 0, 0, 0);
+		//}
+	
+		if (vida == 0)
+		{
+			m_XACT3.m_pSoundBank->Stop(5, 0);
+			m_XACT3.m_pSoundBank->Play(5, 0, 0, 0);
+			
+			BarraVida0->Draw(-0.86, -0.3);
+			Perdiste->Draw(-0.28, 0.4);
+			
+			if (segundos >= 0)
+			{
+			  segundos = 300;
+			}
+
+
+		}
+		
+    #pragma endregion
+
+        #pragma region Cuenta regresiva
+		
+		if (I_Win == false)
+		{
+			CuentaRegresiva->DrawText(-0.45, 0.95, "Tiempo: " + CuentaRegresiva->Time(segundos), 0.015);
+			segundos -= 0.02;
+			ss_textoFinal << CuentaRegresiva->Time(segundos);
+			sTiempo = ss_textoFinal.str();
+		} else 
+			if (I_Win == true)
+		    {
+		    	//ss_textoFinal.str(std::string());
+		    	TextoGanador->DrawText(-0.55, 0.5, "¡Felicidades!" + sTiempo, 0.015);
+				TextoGanador2->DrawText(-0.52, 0.35, "Eres genial" + sTiempo, 0.015);
+
+				Coordenadas->DrawText(-0.6, -0.3, "Presiona ESC para salir:)" + sTiempo, 0.015);
+		    }
+		
 
 		bool TiempoFuera = false;
 
@@ -958,7 +1016,7 @@ public:
 				TiempoMuestra->Time(TimeShow);
 				Tiempo->Draw(-0.28, 0.4);
 				
-				TimeShow -= 0.02;
+				TimeShow -= 0.08;
 				m_XACT3.m_pSoundBank->Stop(5, 0);
 				m_XACT3.m_pSoundBank->Play(5, 0, 0, 0);
 			}
@@ -983,7 +1041,6 @@ public:
 		
 		
         #pragma endregion
-
 
 		swapChain->Present( 1, 0 );
 	}
