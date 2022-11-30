@@ -154,79 +154,79 @@ C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\Text.h(186,35): warn
 C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\Text.h(323,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
 C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\Text.h(346,1): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
 C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(190,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(240,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(241,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(242,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(243,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(244,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(245,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(246,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(247,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
 C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(248,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
 C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(249,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(250,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(251,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(252,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
 C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(253,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(254,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(255,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(256,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(257,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
 C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(258,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(259,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(261,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(262,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
 C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(263,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
 C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(264,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(265,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(413,13): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(570,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(596,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(629,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(635,49): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(643,75): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(688,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(726,30): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(727,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(731,1): warning C4305: '-=': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(760,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(762,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(793,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(795,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(798,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(800,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(803,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(810,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(840,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(842,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(958,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(964,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(969,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(974,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(979,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(994,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(995,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1011,78): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1011,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1012,1): warning C4305: '-=': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1013,43): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1019,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1020,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1022,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1036,25): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(266,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(267,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(268,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(269,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(270,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(418,13): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(575,14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(601,1): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(647,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(653,49): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(661,75): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(706,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(744,30): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(745,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(749,1): warning C4305: '-=': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(778,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(780,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(811,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(813,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(816,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(818,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(821,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(828,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(858,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(860,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(976,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(982,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(987,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(992,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(997,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1012,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1013,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1029,78): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1029,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1030,1): warning C4305: '-=': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1031,43): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
 C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1037,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1039,1): warning C4305: '-=': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1044,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1083,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1229,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1230,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1231,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1232,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1240,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1241,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1242,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1243,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1252,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1253,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1254,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1255,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1264,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1265,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1266,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1267,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1038,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1040,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1054,25): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1055,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1057,1): warning C4305: '-=': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1062,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1101,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1247,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1248,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1249,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1250,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1258,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1259,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1260,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1261,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1270,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1271,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1272,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1273,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1282,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1283,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1284,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\DXRR.h(1285,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
 C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(153,15): warning C4244: 'return': conversión de 'WPARAM' a 'int'; posible pérdida de datos
 C:\Users\ArelyLara\Downloads\repoGC2\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(279,30): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
