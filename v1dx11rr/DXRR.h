@@ -198,6 +198,10 @@ public:
 
 		billboard[0] = new BillboardRR(L"Assets/Billboards/Mountain1.png", L"Assets/Billboards/Mountain1Normal.png", d3dDevice, d3dContext, 1);
 		billboard[1] = new BillboardRR(L"Assets/Billboards/Mountain1.png", L"Assets/Billboards/Mountain1Normal.png", d3dDevice, d3dContext, 1);
+		billboard[2] = new BillboardRR(L"Assets/Billboards/Mountain1.png", L"Assets/Billboards/Mountain1Normal.png", d3dDevice, d3dContext, 1);
+		billboard[3] = new BillboardRR(L"Assets/Billboards/Mountain1.png", L"Assets/Billboards/Mountain1Normal.png", d3dDevice, d3dContext, 1);
+		billboard[4] = new BillboardRR(L"Assets/Billboards/Mountain1.png", L"Assets/Billboards/Mountain1Normal.png", d3dDevice, d3dContext, 1);
+
 
 		//model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
       #pragma region MODELOS CARGADOS AQUÍ
@@ -603,11 +607,21 @@ public:
 			-11, -78, 4, 5, 1, 1, uv1, uv2, uv3, uv4, frameBillboard, 'D', neutralLightD, neutralLightC);*/
 
 		billboard[0]->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-250.0f, 50.0f, terreno->Superficie(-10.0f, 3.0f) - 0.1f,
-			60, 6, 1, 0, 0, 0, 0, 0, 'S', light->GetDirection(), light->GetDiffuseColor(), 'Y', 0);
-		billboard[0]->Draw(camara->vista, camara->proyeccion, camara->posCam,
-			-250.0f, -150.0f, terreno->Superficie(-10.0f, 3.0f) - 0.1f,
-			60, 6, 1, 0, 0, 0, 0, 0, 'S', light->GetDirection(), light->GetDiffuseColor(), 'Y', 0);
+			-235.0f, 200.0f, -5.0f,
+			60, 1, 1, 0, 0, 0, 0, 0, 'S', light->GetDirection(), light->GetDiffuseColor(), 'Y', 0);
+		billboard[1]->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-240.0f, 100.0f, -5.0f,
+			60, 1, 1, 0, 0, 0, 0, 0, 'S', light->GetDirection(), light->GetDiffuseColor(), 'Y', 0);
+		billboard[2]->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-235.0f, 0.0f, -5.0f,
+			60, 1, 1, 0, 0, 0, 0, 0, 'S', light->GetDirection(), light->GetDiffuseColor(), 'Y', 0);
+		billboard[3]->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-240.0f, -100.0f, -5.0f,
+			60, 1, 1, 0, 0, 0, 0, 0, 'S', light->GetDirection(), light->GetDiffuseColor(), 'Y', 0);
+		billboard[4]->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			-235.0f, -200.0f, -5.0f,
+			60, 1, 1, 0, 0, 0, 0, 0, 'S', light->GetDirection(), light->GetDiffuseColor(), 'Y', 0);
+
 
 		////(vita, proyección, altura en Y, posición de la cámara, fuerza especular, ángulo de rotación, angulo en que se rotará, escala)
 		if (inFP) {
