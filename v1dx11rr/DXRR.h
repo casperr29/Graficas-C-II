@@ -151,8 +151,8 @@ public:
 	{
 		#pragma region Inicializacion
 			breakpoint = false;
-			segundos = 301;
-			TimeShow = 2;
+			segundos = 5;
+			TimeShow = 3;
 			TimeWinShow = 10;
 			ReadPaper = false;
 			frameBillboard = 0;
@@ -388,9 +388,9 @@ public:
 		// Initialize XACT3
 		bool compileResult = m_XACT3.Initialize();
 		if (!compileResult) return false;
-		compileResult = m_XACT3.LoadWaveBank(L"InteractiveS\\Win\\MyBank.xwb");
+		compileResult = m_XACT3.LoadWaveBank(L"sInteractive\\Win\\WaveBank.xwb");
 		if (!compileResult) return false;
-		compileResult = m_XACT3.LoadSoundBank(L"InteractiveS\\Win\\SoundBank.xsb");
+		compileResult = m_XACT3.LoadSoundBank(L"sInteractive\\Win\\SoundBank.xsb");
 		if (!compileResult) return false;
 
 
@@ -653,6 +653,8 @@ public:
 		if (ReadPaper == true)
 		{
 			PaperUI->Draw(-0.28, 0.33);
+			m_XACT3.m_pSoundBank->Stop(7, 0);
+			m_XACT3.m_pSoundBank->Play(7, 0, 0, 0);
 		}
 		//--------------------------------------------------COLISIONES------------------------------
 
@@ -700,7 +702,10 @@ public:
 		if (vida == 0)
 		{
 			BarraVida0->Draw(-0.86, -0.3);
+			m_XACT3.m_pSoundBank->Stop(5, 0);
+			m_XACT3.m_pSoundBank->Play(5, 0, 0, 0);
 			Perdiste->Draw(-0.28, 0.4);
+			
 			if (segundos >= 0)
 			{
 			  segundos = 300;
@@ -716,18 +721,23 @@ public:
 		
 		//CollisionWin(-70,-42, -140 , -139, true);
 		
-		if (camara->posCam.z > -72 && camara->posCam.z<-42 && camara->posCam.x > -228 && camara->posCam.x < -136)
+		if (camara->posCam.z > -72 && camara->posCam.z<-42 && camara->posCam.x > -228 && camara->posCam.x < -132)
 		{
 			
 			if (TimeWinShow >= 0 && TotalKeys == 3)
 			{
-				m_XACT3.m_pSoundBank->Play(MusicWin, 0, 0, 0);
 				TiempoMuestraGanar->Time(TimeShow);
 				Ganaste->Draw(-0.28, 0.4);
+				m_XACT3.m_pSoundBank->Stop(0, 0);
+				m_XACT3.m_pSoundBank->Play(0, 0, 0, 0);
 				TimeWinShow -= 0.02;
 			}
 			else {
+				if(TotalKeys < 3)
 			      //Poner condicionales de que te faltan tantas llaves aquí
+					camara->posCam.x = camara->posCam.x + 1;
+				m_XACT3.m_pSoundBank->Stop(2, 0);
+				m_XACT3.m_pSoundBank->Play(2, 0, 0, 0);
 			}
 
 		}
@@ -832,6 +842,8 @@ public:
 			if (isPointInsideSphere(camara->getPos(), llave->getSphere(8)))
 			{
 				//m_InteractivoXACT3.m_pMySB->Play(2, 0, 0, 0);
+				m_XACT3.m_pSoundBank->Stop(1, 0);
+				m_XACT3.m_pSoundBank->Play(1, 0, 0, 0);
 				key1 = true;
 				TotalKeys++;
 			}
@@ -843,7 +855,8 @@ public:
 
 			if (isPointInsideSphere(camara->getPos(), llave2->getSphere(8)))
 			{
-				
+				m_XACT3.m_pSoundBank->Stop(1, 0);
+				m_XACT3.m_pSoundBank->Play(1, 0, 0, 0);
 				key2 = true;
 				TotalKeys++;
 			}
@@ -855,7 +868,8 @@ public:
 
 			if (isPointInsideSphere(camara->getPos(), llave3->getSphere(20)))
 			{
-				
+				m_XACT3.m_pSoundBank->Stop(1, 0);
+				m_XACT3.m_pSoundBank->Play(1, 0, 0, 0);
 				key3 = true;
 				TotalKeys++;
 			}
@@ -868,7 +882,8 @@ public:
 			pincho1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 			if (isPointInsideSphere(camara->getPos(), pincho1->getSphere(8)))
 			{
-				
+				m_XACT3.m_pSoundBank->Stop(2, 0);
+				m_XACT3.m_pSoundBank->Play(2, 0, 0, 0);
 				vida = vida - 1;
 				pinchos1 = true;
 			}
@@ -879,7 +894,8 @@ public:
 			pincho2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 			if (isPointInsideSphere(camara->getPos(), pincho2->getSphere(8)))
 			{
-				
+				m_XACT3.m_pSoundBank->Stop(2, 0);
+				m_XACT3.m_pSoundBank->Play(2, 0, 0, 0);
 				vida = vida - 1;
 				pinchos2 = true;
 			}
@@ -890,7 +906,8 @@ public:
 			pincho3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 			if (isPointInsideSphere(camara->getPos(), pincho3->getSphere(8)))
 			{
-				
+				m_XACT3.m_pSoundBank->Stop(2, 0);
+				m_XACT3.m_pSoundBank->Play(2, 0, 0, 0);
 				vida = vida - 1;
 				pinchos3 = true;
 			}
@@ -901,7 +918,8 @@ public:
 			pincho4->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 			if (isPointInsideSphere(camara->getPos(), pincho4->getSphere(8)))
 			{
-			
+				m_XACT3.m_pSoundBank->Stop(2, 0);
+				m_XACT3.m_pSoundBank->Play(2, 0, 0, 0);
 				vida = vida - 1;
 				pinchos4 = true;
 			}
@@ -912,7 +930,8 @@ public:
 			pincho5->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1.5, light->GetDirection(), light->GetDiffuseColor());
 			if (isPointInsideSphere(camara->getPos(), pincho5->getSphere(8)))
 			{
-				
+				m_XACT3.m_pSoundBank->Stop(2, 0);
+				m_XACT3.m_pSoundBank->Play(2, 0, 0, 0);
 				vida = vida - 1;
 				pinchos5 = true;
 			}
@@ -926,27 +945,39 @@ public:
 		CuentaRegresiva->DrawText(-0.45, 0.95, "Tiempo: " + CuentaRegresiva->Time(segundos), 0.015);
 		segundos -= 0.02;
 
+		bool TiempoFuera = false;
+
+		
 		if (segundos <= 0)
 		{
+			TiempoFuera = true;
 			segundos = 0;
-			//Se dibuja la imagen que te dice que se acaba el tiempo
 			
 			if (TimeShow >= 0)
-
 			{
 				TiempoMuestra->Time(TimeShow);
 				Tiempo->Draw(-0.28, 0.4);
-
+				
 				TimeShow -= 0.02;
-
+				m_XACT3.m_pSoundBank->Stop(5, 0);
+				m_XACT3.m_pSoundBank->Play(5, 0, 0, 0);
 			}
-			else
-			{
+			else{
 				Perdiste->Draw(-0.28, 0.4);
+			
 			}
 			
 		}
+		
 
+		if (segundos <= 6)
+		{
+			m_XACT3.m_pSoundBank->Stop(6, 0);
+			m_XACT3.m_pSoundBank->Play(6, 0, 1, 0);
+			
+
+		}
+		
 		
 		
 		

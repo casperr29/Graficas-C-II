@@ -177,56 +177,56 @@ C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(597,44):
 C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(603,49): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(611,75): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(655,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(674,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(679,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(684,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(689,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(694,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(702,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(703,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(725,30): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(726,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(727,1): warning C4305: '-=': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(744,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(746,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(777,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(779,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(782,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(784,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(676,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(681,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(686,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(691,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(696,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(704,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(707,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(729,30): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(730,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(733,1): warning C4305: '-=': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(754,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(756,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
 C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(787,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(789,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(792,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
 C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(794,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(824,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(826,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(926,77): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(926,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(927,1): warning C4305: '-=': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(937,25): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(938,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(940,1): warning C4305: '-=': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(797,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(804,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(834,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(836,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(945,77): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
 C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(945,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(975,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1121,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1122,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1123,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1124,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1132,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1133,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1134,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1135,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1144,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1145,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1146,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1147,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1156,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1157,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1158,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1159,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(946,1): warning C4305: '-=': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(958,25): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(959,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(961,1): warning C4305: '-=': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(966,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1006,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1152,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1153,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1154,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1155,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1163,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1164,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1165,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1166,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1175,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1176,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1177,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1178,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1187,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1188,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1189,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\DXRR.h(1190,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
 C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(153,15): warning C4244: 'return': conversión de 'WPARAM' a 'int'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(275,30): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(279,70): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(284,33): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(285,22): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(279,30): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(283,70): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(288,33): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\TerrenoSkyBill.cpp(289,22): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\GUI.h(159): warning C4715: 'GUI::InitScene': no todas las rutas de acceso de control devuelven un valor
 C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\v1dx11rr\Text.h(180): warning C4715: 'Text::InitScene': no todas las rutas de acceso de control devuelven un valor
   v1dx11rr.vcxproj -> C:\Users\Montse\Documents\GitHub\GC II PF\Graficas-C-II\x64\Debug\Laberinto.exe

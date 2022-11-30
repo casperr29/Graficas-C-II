@@ -222,19 +222,21 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
                 break;
             }
 
-            if (keyboardData[DIK_E] & 0x80) {
-                dxrr->m_XACT3.m_pSoundBank->Stop(1, 0);
-                dxrr->m_XACT3.m_pSoundBank->Play(1, 0, 0, 0);
+            if (keyboardData[DIK_E] & 0x80) { //Sonido del timbre de bicicleta 
+                dxrr->m_XACT3.m_pSoundBank->Stop(4, 0);
+                dxrr->m_XACT3.m_pSoundBank->Play(4, 0, 0, 0);
                 break;
             }
 
-            if (keyboardData[DIK_X] & 0x80) {
+            if (keyboardData[DIK_X] & 0x80) { //El YOU LOSE
+                dxrr->m_XACT3.m_pSoundBank->Stop(5, 0);
                 dxrr->m_XACT3.m_pSoundBank->Play(5, 0, 0, 0);
                 break;
             }
 
-            if (keyboardData[DIK_C] & 0x80) {
-                dxrr->m_XACT3.m_pSoundBank->Play(0, 0, 0, 0);
+            if (keyboardData[DIK_C] & 0x80) {//Tomar item xd
+                dxrr->m_XACT3.m_pSoundBank->Stop(6, 0);
+                dxrr->m_XACT3.m_pSoundBank->Play(6, 0, 0, 0);
                 break;
             }
 
@@ -246,8 +248,10 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 			}
 
 			if (keyboardData[DIK_R] & 0x80) {
-
+                
+               
                 dxrr->ReadPaper = true;
+                
               }
               else {
                 dxrr->ReadPaper = false;
