@@ -156,7 +156,7 @@ public:
 	{
 		#pragma region Inicializacion
 			breakpoint = false;
-			segundos = 10;
+			segundos = 301;
 			TimeShow = 3;
 			TimeWinShow = 1.5;
 			ReadPaper = false;
