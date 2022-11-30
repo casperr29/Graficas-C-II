@@ -8,6 +8,14 @@ bump  -bm 1 Luca3D_Modern_Bench_2_NORMAL.tif
 Ni 1.00
 Ks 0.20 0.20 0.20
 Ns 98.00
+newmtl OPM0041SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 23.00
 newmtl PelotaFBXASC032deFBXASC032FutbolSG
 illum 4
 Kd 0.00 0.00 0.00
@@ -57,6 +65,22 @@ Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
+newmtl houseA_obj:HouseAMat
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 96.08
+newmtl houseA_obj:HouseAMat_houseA_jpg
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 96.08
 newmtl initialShadingGroup
 illum 4
 Kd 0.50 0.50 0.50

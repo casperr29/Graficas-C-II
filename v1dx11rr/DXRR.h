@@ -206,6 +206,7 @@ public:
 		billboard[7] = new BillboardRR(L"Assets/Billboards/Mountain3.png", L"Assets/Billboards/Mountain3Normal.png", d3dDevice, d3dContext, 1);
 		billboard[8] = new BillboardRR(L"Assets/Billboards/Mountain3.png", L"Assets/Billboards/Mountain3Normal.png", d3dDevice, d3dContext, 1);
 		billboard[9] = new BillboardRR(L"Assets/Billboards/Mountain3.png", L"Assets/Billboards/Mountain3Normal.png", d3dDevice, d3dContext, 1);
+		billboard[10] = new BillboardRR(L"Assets/Billboards/Arbusto.png", L"Assets/Billboards/ArbustoNormal.png", d3dDevice, d3dContext, 1);
 
 
 		//model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
@@ -216,7 +217,7 @@ public:
 		llave2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Llave/Llave2.obj", L"Assets/Llave/Llave Color.jpg", L"Assets/Llave/Llave Specular.jpg", 78, 89);
 		llave3 = new ModeloRR(d3dDevice, d3dContext, "Assets/Llave/Llave3.obj", L"Assets/Llave/Llave Color.jpg", L"Assets/Llave/Llave Specular.jpg", -32, -116);
 		pelota = new ModeloRR(d3dDevice, d3dContext, "Assets/Pelota/Pelota.obj", L"Assets/Pelota/Pelota Color.png", L"Assets/Pelota/Pelota Specular.jpg", 0, 0);
-		juego = new ModeloRR(d3dDevice, d3dContext, "Assets/Juego/Juego.obj", L"Assets/Juego/Juego Color.jpg", L"Assets/Juego/Juego Specular.jpg",0, 0);
+		juego = new ModeloRR(d3dDevice, d3dContext, "Assets/Juego/Juego.obj", L"Assets/Juego/Juego Color.jpg", L"Assets/Juego/Juego Specular.jpg",25, 165);
 		casa = new ModeloRR(d3dDevice, d3dContext, "Assets/Casa/houseA_obj.obj", L"Assets/Casa/1casa.jpg", L"Assets/Casa/1casaS.jpg", -118, 98);
 		mesa = new ModeloRR(d3dDevice, d3dContext, "Assets/mesita/mesita.obj", L"Assets/mesita/Default_albedo.jpg", L"Assets/mesita/Default_roughness.jpg", -138, 61);
 		kiosko1 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_1.obj", L"Assets/Kiosko/Kiosko_1 Color.png", L"Assets/Kiosko/Kiosko_1 Specular.png", -74, 124);
@@ -638,6 +639,9 @@ public:
 		billboard[8]->Draw(camara->vista, camara->proyeccion, camara->posCam,
 			235.0f, 150.0f, -5.0f,
 			60, 1, 1, 0, 0, 0, 0, 0, 'S', light->GetDirection(), light->GetDiffuseColor(), 'Y', 10);
+		billboard[10]->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			25, 185.0f, -1.0f,
+			6, 1, 1, 0, 0, 0, 0, 0, 'S', light->GetDirection(), light->GetDiffuseColor(), 'Y', -165);
 
 
 		////(vita, proyección, altura en Y, posición de la cámara, fuerza especular, ángulo de rotación, angulo en que se rotará, escala)
@@ -680,13 +684,13 @@ public:
 		
 		stringstream ss_textoFinal;
 		string sTiempo;
-		//float camPosXZ[2] = { camara->posCam.x, camara->posCam.z };
-		//stringstream ss;
-		//ss << camara->posCam.x;
-		//Coordenadas->DrawText(-0.95, 0.95, "X: " + ss.str(), 0.01);
-		//ss.str(std::string());
-		//ss << camara->posCam.z;
-		//Coordenadas->DrawText(-0.95, 0.85, "Z: " + ss.str(), 0.01);
+		float camPosXZ[2] = { camara->posCam.x, camara->posCam.z };
+		stringstream ss;
+		ss << camara->posCam.x;
+		Coordenadas->DrawText(-0.95, 0.95, "X: " + ss.str(), 0.01);
+		ss.str(std::string());
+		ss << camara->posCam.z;
+		Coordenadas->DrawText(-0.95, 0.85, "Z: " + ss.str(), 0.01);
 
 
 		if (TotalKeys != 3)
