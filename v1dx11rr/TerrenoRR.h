@@ -89,7 +89,7 @@ public:
 		this->alto = alto;
 		//aqui cargamos las texturas de alturas y el cesped
 		//CargaParametros(L"Starter_Content\\vckmabus_2K_Albedo.jpg", L"Starter_Content\\alturas.jpg", 100.0f); //Original
-		CargaParametros(L"TextTerreno\\CespedRocas.jpg", L"TextTerreno\\AlturaA.jpg", 40.0f); //Plano con lago
+		CargaParametros(L"TextTerreno\\CespedRocas.jpg", L"TextTerreno\\AlturaA3.jpg", 40.0f); //Plano con lago
 	}
 
 	~TerrenoRR()

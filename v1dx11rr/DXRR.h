@@ -191,7 +191,7 @@ public:
 
 		light = new Light(-30.0f, -50.0f, -30.0f, 0.2f, 0.2f, 1.0f, 1.0f);
 		terreno = new TerrenoRR(480, 480, d3dDevice, d3dContext);
-		lago = new Agua(79, 111, d3dDevice, d3dContext);
+		lago = new Agua(100, 100, d3dDevice, d3dContext);
 		//skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"Starter_Content/SkyDome.png");
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"TextTerreno/Sky/SkyD3.png", L"TextTerreno/Sky/SkyT4_ED.jpg", L"TextTerreno/Sky/SkyN4_ED.jpg", light);
 		//billboard[0] = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
@@ -605,7 +605,7 @@ public:
 
 		terreno->Draw(camara->vista, camara->proyeccion, light->GetDirection(), light->GetDiffuseColor(), camara->posCam);
 
-		lago->Draw(camara->vista, camara->proyeccion, camara->posCam, onda, light->GetDirection(), light->GetDiffuseColor(), 79.3f, -3.0f, 111.1f);
+		lago->Draw(camara->vista, camara->proyeccion, camara->posCam, onda, light->GetDirection(), light->GetDiffuseColor(), 150.0f, -9.0f, 150.1f);
 
 		//TurnOnAlphaBlending();
 		/*billboard[0]->Draw(camara->vista, camara->proyeccion, camara->posCam,
